@@ -99,3 +99,9 @@ a:hover {
 .btn-primary:hover {
     background-color: #EA4E7F;
 }
+
+.autor {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+}
