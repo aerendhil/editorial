@@ -83,12 +83,46 @@ jQuery.validator.addMethod("numbersonly", function(value, element) {
     return this.optional(element) || /^[0-9]+$/i.test(value);
 }); 
 
-jQuery.validator.addMethod("validarRut", function(rutCompleto){
-    if (!/^[0-9]+[-|‐]{1}[0-9kK]{1}$/.test( rutCompleto ))
-        return false;
-    var tmp 	= rutCompleto.split('-');
-    var digv	= tmp[1]; 
-    var rut 	= tmp[0];
-    if ( digv == 'K' ) digv = 'k' ;
-    return (Fn.dv(rut) == digv );
+jQuery.validator.addMethod("validarRut", function(value, element){
+    return this.optional(element) || validar(value);
 });
+
+function validar(rutCompleto){
+	if ( rutCompleto.length == 0 ){ return false; }
+	if ( rutCompleto.length < 8 ){ return false; }
+
+	rutCompleto = rutCompleto.replace('-','')
+	rutCompleto = rutCompleto.replace(/\./g,'')
+
+    if (rutCompleto.length > 9) { return false; }
+
+	var suma = 0;
+	var caracteres = "1234567890kK";
+	var contador = 0;    
+	for (var i=0; i < rutCompleto.length; i++){
+		u = rutCompleto.substring(i, i + 1);
+		if (caracteres.indexOf(u) != -1)
+		contador ++;
+	}
+	if ( contador==0 ) { return false }
+	
+	var rut = rutCompleto.substring(0,rutCompleto.length-1)
+	var drut = rutCompleto.substring( rutCompleto.length-1 )
+	var dvr = '0';
+	var mul = 2;
+	
+	for (i= rut.length -1 ; i >= 0; i--) {
+		suma = suma + rut.charAt(i) * mul
+                if (mul == 7) 	mul = 2
+		        else	mul++
+	}
+	res = suma % 11
+	if (res==1)		dvr = 'k'
+                else if (res==0) dvr = '0'
+	else {
+		dvi = 11-res
+		dvr = dvi + ""
+	}
+	if ( dvr != drut.toLowerCase() ) { return false; }
+	else { return true; }
+}
