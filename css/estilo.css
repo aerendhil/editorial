@@ -1,0 +1,84 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12pt;
+    background-color: #F2EFE3;
+}
+
+header {
+    background-color: #894E7B;
+    text-align: center;
+}
+
+.header-chico{
+    text-align: right;
+    background-color: #894E7B;
+    align-items: center;
+}
+
+.nav-link {
+    color: #F2EFE3;
+}
+
+.nav-item .nav-link.active{
+    color: #F2EFE3;
+    background-color: #519A77;
+}
+
+.nav-item .nav-link:hover{
+    color: #F2EFE3;
+    background-color: #EA4E7F;
+}
+
+a:hover {
+    color: #F2EFE3;
+}
+
+.logo-header {
+    height: 60px;
+}
+
+.barra-busqueda>a {
+    text-decoration: none;
+}
+
+.lnr {
+    fill: #F2EFE3;
+    width: 40px;
+    height: 40px;
+}
+
+.carrusel {
+    width: 60%;
+    height: 25%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    min-width: 40%;
+    max-width: 300px;
+}
+
+.registro {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    min-width: 40%;
+    max-width: 300px;
+}
+
+
+.stretched-link:hover {
+    color: #894E7B;
+}
+
+.btn-primary {
+    background-color: #894E7B;
+}
+
+.btn-primary:hover {
+    background-color: #EA4E7F;
+}
