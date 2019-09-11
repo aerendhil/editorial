@@ -87,7 +87,7 @@
             <div class="form-group row">
                 <label for="txtRun" class="col-sm-2 col-form-label">RUN</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="txtRun" placeholder="">
+                    <input type="text" class="form-control" id="txtRun" placeholder="99999999-9">
                 </div>
             </div>
             <!-- Nombres -->
@@ -114,7 +114,42 @@
                     </script>
                 </div>
             </div>
-            <!-- Fecha de Nacimiento -->
+            <!-- Teléfono -->
+            <div class="form-group row">
+                <label for="txtTelefono" class="col-sm-2 col-form-label">Teléfono</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="txtTelefono" placeholder="">
+                </div>
+            </div>
+            <!-- Región -->
+            <div class="form-group row">
+                <label for="cmbRegion" class="col-sm-2 col-form-label">Región</label>
+                <div class="col-sm-10">
+                    <select name="cmbRegion" class="form-control" id="cmbRegion" required>
+                        <option value="" selected disabled>Seleccione una región</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Ciudad-->
+            <div class="form-group row">
+                <label for="cmbCiudad" class="col-sm-2 col-form-label">Ciudad</label>
+                <div class="col-sm-10">
+                    <select name="cmbCiudad" class="form-control" id="cmbCiudad" required>
+                        <option value="" selected disabled>Seleccione una ciudad</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Comuna -->
+            <div class="form-group row">
+                <label for="cmbComuna" class="col-sm-2 col-form-label">Comuna</label>
+                <div class="col-sm-10">
+                    <select name="cmbComuna" class="form-control" id="cmbComuna" required>
+                        <option value="" selected disabled>Seleccione una comuna</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+            <!-- Botón registrarse -->
             <div class="form-group row">
                 <div class="col-sm-10 offset-sm-2">
                     <button type="submit" class="btn btn-primary">Registrarse</button>
