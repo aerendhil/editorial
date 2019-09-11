@@ -12,6 +12,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!--JQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
     <!--Iconos-->
     <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
     <!--CSS propio-->
@@ -75,40 +76,40 @@
         </div>
     </header>
     <div class="registro p-2">
-        <form>
+        <form action="#" method="POST" id="form_registro">
             <!-- Correo -->
             <div class="form-group row">
                 <label for="txtCorreo" class="col-sm-2 col-form-label">Correo</label>
                 <div class="col-sm-10">
-                    <input type="email" class="form-control" id="txtCorreo" placeholder="correo@email.com">
+                    <input type="email" class="form-control" name="txtCorreo" id="txtCorreo" placeholder="correo@email.com">
                 </div>
             </div>
             <!-- Run -->
             <div class="form-group row">
                 <label for="txtRun" class="col-sm-2 col-form-label">RUN</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="txtRun" placeholder="99999999-9">
+                    <input type="text" class="form-control" name="txtRun" id="txtRun" placeholder="99999999-9">
                 </div>
             </div>
             <!-- Nombres -->
             <div class="form-group row">
                 <label for="txtNombres" class="col-sm-2 col-form-label">Nombres</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="txtNombres" placeholder="">
+                    <input type="text" class="form-control" name="txtNombres" id="txtNombres" placeholder="">
                 </div>
             </div>
             <!-- Apellidos -->
             <div class="form-group row">
                 <label for="txtAppellidos" class="col-sm-2 col-form-label">Apellidos</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="txtAppellidos" placeholder="">
+                    <input type="text" class="form-control" name="txtApellidos" id="txtApellidos" placeholder="">
                 </div>
             </div>
             <!-- Fecha de Nacimiento -->
             <div class="form-group row">
                 <label for="dtpNacimiento" class="col-sm-2 col-form-label">Fec. Nacim.</label>
                 <div class="col-sm-10">
-                    <input id="dtpNacimiento" class="form-control">
+                    <input name="dtpNacimiento" id="dtpNacimiento" class="form-control">
                     <script>
                         $('#dtpNacimiento').datepicker();
                     </script>
@@ -118,15 +119,15 @@
             <div class="form-group row">
                 <label for="txtTelefono" class="col-sm-2 col-form-label">Teléfono</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="txtTelefono" placeholder="">
+                    <input type="text" class="form-control" name="txtTelefono" id="txtTelefono" placeholder="">
                 </div>
             </div>
             <!-- Región -->
             <div class="form-group row">
                 <label for="cmbRegion" class="col-sm-2 col-form-label">Región</label>
                 <div class="col-sm-10">
-                    <select name="cmbRegion" class="form-control" id="cmbRegion" required>
-                        <option value="" selected disabled>Seleccione una región</option>
+                    <select name="cmbRegion" class="form-control" name="cmbRegion" id="cmbRegion" required>
+                        <option value="" disabled></option>
                     </select>
                 </div>
             </div>
@@ -134,8 +135,8 @@
             <div class="form-group row">
                 <label for="cmbCiudad" class="col-sm-2 col-form-label">Ciudad</label>
                 <div class="col-sm-10">
-                    <select name="cmbCiudad" class="form-control" id="cmbCiudad" required>
-                        <option value="" selected disabled>Seleccione una ciudad</option>
+                    <select name="cmbCiudad" class="form-control" name="cmbCiudad" id="cmbCiudad" required>
+                        <option value="" disabled></option>
                     </select>
                 </div>
             </div>
@@ -143,12 +144,26 @@
             <div class="form-group row">
                 <label for="cmbComuna" class="col-sm-2 col-form-label">Comuna</label>
                 <div class="col-sm-10">
-                    <select name="cmbComuna" class="form-control" id="cmbComuna" required>
-                        <option value="" selected disabled>Seleccione una comuna</option>
+                    <select name="cmbComuna" class="form-control" name="cmbComuna" id="cmbComuna" required>
+                        <option value="" disabled></option>
+                    </select>
+                </div>
+            </div>
+            <!-- Tipo de Vivienda -->
+            <div class="form-group row">
+                <label for="cmbVivienda" class="col-sm-2 col-form-label">Vivienda</label>
+                <div class="col-sm-10">
+                    <select name="cmbVivienda" class="form-control" name="cmbVivienda" id="cmbVivienda" required>
+                        <option value="" disabled></option>
+                        <option value="patioGrande">Casa con patio grande</option>
+                        <option value="patioPequeño">Casa con patio pequeño</option>
+                        <option value="sinPatio">Casa sin patio</option>
+                        <option value="departamento">Departamento</option>
                     </select>
                 </div>
             </div>
             <br>
+            <p class="text-info" id="msg_error"></p>
             <!-- Botón registrarse -->
             <div class="form-group row">
                 <div class="col-sm-10 offset-sm-2">
@@ -157,6 +172,7 @@
             </div>
         </form>
     </div>
+    <script src="/js/validador.js"></script>
 </body>
 
 </html>
