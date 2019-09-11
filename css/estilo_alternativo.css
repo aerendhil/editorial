@@ -1,20 +1,20 @@
 /* Colores
-#894E7B
-#EA4E7F
+#82D0C9
+#F48379
 #F2EFE3
 #7DDEDB
-#519A77
+#5A95BC
 */
 @import url('https://fonts.googleapis.com/css?family=Hepta+Slab&display=swap');
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 12pt;
-    background-color: #F2EFE3;
+    background-color: #E1E8E1;
 }
 
 header {
-    background-color: #894E7B;
+    background-color: #82D0C9;
     text-align: center;
 }
 
@@ -30,7 +30,7 @@ header {
 
 .header-chico{
     text-align: right;
-    background-color: #894E7B;
+    background-color: #5A95BC;
     align-items: center;
     font-family: 'Hepta Slab', serif;
     font-weight: bold;
@@ -41,13 +41,13 @@ header {
 }
 
 .nav-item .nav-link.active{
-    color: #F2EFE3;
-    background-color: #519A77;
+    color: #5A95BC;
+    background-color: #E1E8E1;
 }
 
 .nav-item .nav-link:hover{
     color: #F2EFE3;
-    background-color: #EA4E7F;
+    background-color: #F48379;
 }
 
 a:hover {
@@ -97,19 +97,19 @@ a:hover {
 }
 
 .stretched-link {
-    color: #EA4E7F;
+    color: #F48379;
 }
 
 .stretched-link:hover {
-    color: #894E7B;
+    color: #82D0C9;
 }
 
 .btn-primary {
-    background-color: #894E7B;
+    background-color: #82D0C9;
 }
 
 .btn-primary:hover {
-    background-color: #EA4E7F;
+    background-color: #F48379;
 }
 
 .autores {
