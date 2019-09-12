@@ -296,6 +296,14 @@ a:hover {
     align-items: center;
 }
 
+.solo-footer {
+    background-color: #ce983f;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
 #logo-footer {
     height: 100px;
 }
