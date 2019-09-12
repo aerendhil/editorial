@@ -14,8 +14,10 @@
         <!--Iconos-->
         <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
         <!--CSS propio-->
-        <link rel="stylesheet" href="css/estilo_alternativo.css">
+        <link rel="stylesheet" href="css/estilo.css">
         <title>Editorial Sic Mundus</title>
+        <!-- Font awesome -->
+        <script src="https://kit.fontawesome.com/eea48fb8d0.js"></script>
     </head>
     <body>
         <!-- Header -->
@@ -24,9 +26,10 @@
                 <div class="p-2">
                     <img class="logo-header" src="/img/logo.png" alt="logo--editorial">
                 </div>
+                <!-- Barra de navegación -->
                 <div class="p-2 flex-grow-1">
                     <div class="header-chico">
-                        <ul class="nav nav-pills nav-justified">
+                        <ul class="nav nav-pills nav-justified" id="menu">
                             <li class="nav-item">
                                 <a class="nav-link active" href="/index.html">Home</a>
                             </li>
@@ -41,6 +44,9 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/html/contacto.html">Contacto</a>
+                            </li>
+                            <li class="hamburguesa">
+                                <a href="javascript:void(0);" class=icon onclick="myFunction()"><i class="fas fa-bars fa-3x"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -125,5 +131,33 @@
                 </div>
             </div>
         </div>
+        <div class="catalogo hepta">
+            <br>
+            <h1>Libros del Mes</h1>
+            <p>Los libros más buscados este mes:</p>
+            <div class="d-flex flex-wrap justify-content-center">
+                <div class="d-flex flex-column p-2">
+                    <div class="card">
+                        <img class="portada card-img-top" src="/img/portadas/las_dos_torres.jpg">
+                        <div class="card-body">
+                            <span class="badge badge-titulo">Título</span> Las Dos Torres<br>
+                            <span class="badge badge-autor">Autor</span> J.R.R. Tolkien <br>
+                            <span class="badge badge-precio">Precio</span> $12.000
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-column p-2">
+                    <div class="card">
+                        <img class="portada card-img-top" src="/img/portadas/dune.jpg">
+                        <div class="card-body">
+                            <span class="badge badge-titulo">Título</span> Dune<br>
+                            <span class="badge badge-autor">Autor</span> Frank Herbert <br>
+                            <span class="badge badge-precio">Precio</span> $12.000
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/js/hamburguesa.js"></script>
     </body>
 </html>

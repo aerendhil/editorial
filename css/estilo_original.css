@@ -1,20 +1,21 @@
 /* Colores
-#82D0C9
-#F48379
+#894E7B
+#EA4E7F
 #F2EFE3
 #7DDEDB
-#5A95BC
+#519A77
 */
 @import url('https://fonts.googleapis.com/css?family=Hepta+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 12pt;
-    background-color: #E1E8E1;
+    background-color: #F2EFE3;
 }
 
 header {
-    background-color: #82D0C9;
+    background-color: #894E7B;
     text-align: center;
 }
 
@@ -27,10 +28,20 @@ header {
     font-weight: bold;
 }
 
+.nunito {
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+}
+
+.nunito-bold{
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
 
 .header-chico{
     text-align: right;
-    background-color: #5A95BC;
+    background-color: #894E7B;
     align-items: center;
     font-family: 'Hepta Slab', serif;
     font-weight: bold;
@@ -41,13 +52,13 @@ header {
 }
 
 .nav-item .nav-link.active{
-    color: #5A95BC;
-    background-color: #E1E8E1;
+    color: #F2EFE3;
+    background-color: #519A77;
 }
 
 .nav-item .nav-link:hover{
     color: #F2EFE3;
-    background-color: #F48379;
+    background-color: #EA4E7F;
 }
 
 a:hover {
@@ -97,19 +108,19 @@ a:hover {
 }
 
 .stretched-link {
-    color: #F48379;
+    color: #EA4E7F;
 }
 
 .stretched-link:hover {
-    color: #82D0C9;
+    color: #894E7B;
 }
 
 .btn-primary {
-    background-color: #82D0C9;
+    background-color: #894E7B;
 }
 
 .btn-primary:hover {
-    background-color: #F48379;
+    background-color: #EA4E7F;
 }
 
 .autores {
@@ -125,6 +136,47 @@ a:hover {
     object-fit: cover;
 }
 
+.catalogo {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1100px;
+    min-width: 40%;
+}
+
+.portada {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.badge {
+    width: 53px;
+}
+
+.badge-autor{
+    background-color: #EA4E7F;
+    color: #F2EFE3;
+}
+
+.badge-titulo{
+    background-color: #519A77;
+    color: #F2EFE3;
+}
+
+.badge-precio{
+    background-color: #894E7B;
+    color: #F2EFE3;
+}
+
 .error {
     color: crimson;
+    font-size: 10pt;
+}
+
+.card {
+    max-width: 300px;
+}
+
+.card-text {
+    word-wrap: break-word;
 }
