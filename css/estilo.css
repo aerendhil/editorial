@@ -270,7 +270,6 @@ a:hover {
 .footer {
     background-color: #ce983f;
     align-items: center;
-    display: block;
 }
 
 #logo-footer {
@@ -282,7 +281,8 @@ a:hover {
     margin-right: auto;
 }
 
-.redes-footer {
+.redes {
     margin-left: auto;
     margin-right: auto;
 }
+
