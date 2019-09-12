@@ -11,6 +11,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <!--JQuery-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
         <!--Iconos-->
         <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
         <!--CSS propio-->
@@ -47,7 +48,7 @@
                                 <a class="nav-link" href="/html/contacto.html">Contacto</a>
                             </li>
                             <li class="hamburguesa">
-                                <a href="javascript:void(0);" class=icon onclick="myFunction()"><i class="fas fa-bars fa-3x"></i></a>
+                                <a href="javascript:void(0);" class=icon onclick="toggleMenu()"><i class="fas fa-bars fa-3x"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -68,17 +69,19 @@
             </div>
         </header>
         <div class="login p-2">
-            <form>
+            <form action="" method="POST" id="form_login">
+                <!-- correo -->
                 <div class="form-group row">
                     <label for="txtCorreo" class="col-sm-2 col-form-label">Correo</label>
                     <div class="col-sm-10">
-                        <input type="email" class="form-control" id="txtCorreo" placeholder="correo@email.com">
+                        <input type="email" class="form-control" id="txtCorreo" name="txtCorreo" placeholder="correo@email.com">
                     </div>
                 </div>
+                <!-- Password -->
                 <div class="form-group row">
                     <label for="txtPassword" class="col-sm-2 col-form-label">Contraseña</label>
                     <div class="col-sm-10">
-                        <input type="password" class="form-control" id="txtPassword" placeholder="">
+                        <input type="password" class="form-control" name="txtPassword" id="txtPassword" placeholder="">
                     </div>
                 </div>
                 <div class="form-group row">
@@ -112,6 +115,7 @@
                 <div><i class="fab fa-twitter-square fa-5x p-2 rrss-logo"></i></div>
             </div>
         </footer>
+        <script src="/js/validador.js"></script>
         <script src="/js/hamburguesa.js"></script>
     </body>
 </html>

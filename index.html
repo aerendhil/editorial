@@ -48,7 +48,7 @@
                                 <a class="nav-link" href="/html/contacto.html">Contacto</a>
                             </li>
                             <li class="hamburguesa">
-                                <a href="javascript:void(0);" class=icon onclick="myFunction()"><i class="fas fa-bars fa-3x"></i></a>
+                                <a href="javascript:void(0);" class=icon onclick="toggleMenu()"><i class="fas fa-bars fa-3x"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -98,24 +98,25 @@
                 </a>
             </div>
         </div>
+        <!-- autores destacados -->
         <div class="autores hepta">
             <br>
-            <h1>Autores del Mes</h1>
+            <h1 class="destacado">Autores del Mes</h1>
             <p>Los autores más buscados este mes:</p>
             <div class="d-flex flex-wrap justify-content-center">
-                <div class="d-flex flex-column">
-                    <div class="card scale-up-center">
+                <div class="d-flex flex-column  p-4">
+                    <div class="card">
                         <img class="autor card-img-top" src="/img/autores/FrankHerbert.jpeg" alt="Foto del autor Frank Herbert">
                         <div class="card-body">Frank Herbert</div>
                     </div>
                 </div>
-                <div class="d-flex flex-column">
+                <div class="d-flex flex-column  p-4">
                     <div class="card">
                         <img class="autor card-img-top" src="/img/autores/JRRTolkien.jpg" alt="Foto del autor JRR Tolkien">
                         <div class="card-body">J.R.R. Tolkien</div>
                     </div>
                 </div>
-                <div class="d-flex flex-column">
+                <div class="d-flex flex-column  p-4">
                     <div class="card">
                         <img class="autor card-img-top" src="/img/autores/GeorgeOrwell.jpg" alt="Foto del autor George Orwell">
                         <div class="card-body">George Orwell</div>
@@ -125,10 +126,10 @@
         </div>
         <div class="catalogo hepta">
             <br>
-            <h1>Libros del Mes</h1>
+            <h1 class="destacado">Libros del Mes</h1>
             <p>Los libros más buscados este mes:</p>
             <div class="d-flex flex-wrap justify-content-center">
-                <div class="d-flex flex-column p-2">
+                <div class="d-flex flex-column p-4">
                     <div class="card">
                         <img class="portada card-img-top" src="/img/portadas/las_dos_torres.jpg" alt="Foto de la portada de Las dos torres">
                         <div class="card-body">
@@ -138,7 +139,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex flex-column p-2">
+                <div class="d-flex flex-column p-4">
                     <div class="card">
                         <img class="portada card-img-top" src="/img/portadas/dune.jpg" alt="Foto de la portada de Dune">
                         <div class="card-body">

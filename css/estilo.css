@@ -1,5 +1,5 @@
 /* Colores
-#ce983f
+#92374d
 #193944
 #ecebe4
 #ed6a5a
@@ -44,7 +44,7 @@ header {
 
 
 .header-chico {
-    background-color: #ce983f;
+    background-color: #92374d;
     text-align: right;
     align-items: center;
     font-family: 'Hepta Slab', serif;
@@ -188,7 +188,7 @@ a:hover {
     margin-top: 2%;
     min-width: 40%;
     max-width: 300px;
-    min-height: 80vh;
+    min-height: 75vh;
 }
 
 .form-control {
@@ -201,7 +201,7 @@ a:hover {
     margin-top: 2%;
     min-width: 40%;
     max-width: 300px;
-    min-height: 80vh;
+    min-height: 75vh;
 }
 
 .stretched-link {
@@ -217,7 +217,7 @@ a:hover {
 }
 
 .btn-primary:hover {
-    background-color: #ce983f;
+    background-color: #92374d;
 }
 
 .autores {
@@ -256,7 +256,7 @@ a:hover {
 }
 
 .badge-titulo {
-    background-color: #ce983f;
+    background-color: #92374d;
     color: #F2EFE3;
 }
 
@@ -294,12 +294,12 @@ a:hover {
 }
 
 .footer {
-    background-color: #ce983f;
+    background-color: #92374d;
     align-items: center;
 }
 
 .solo-footer {
-    background-color: #ce983f;
+    background-color: #92374d;
     align-items: center;
     position: absolute;
     bottom: 0;
@@ -318,4 +318,9 @@ a:hover {
 .redes {
     margin-left: auto;
     margin-right: auto;
+}
+
+.destacado {
+    color: #e4572e;
+    font-weight: bold;
 }

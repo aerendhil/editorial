@@ -1,3 +1,27 @@
+//Validación login
+$("#form_login").validate({
+    rules: {
+        "txtCorreo":{
+            required: true,
+            email: true
+        },
+        "txtPassword":{
+            required: true,
+            minlength: 6
+        }
+    },
+    messages:{
+        "txtCorreo":{
+            required: "Debe llenar el campo antes de continuar",
+            email: "Formato de correo incorrecto"
+        },
+        "txtPassword":{
+            required: "Debe llenar el campo antes de continuar",
+            minlength: "La contraseña es demasiado corta"
+        }
+    }
+});
+
 $("#form_registro").validate({
     rules: {
         "txtCorreo":{
