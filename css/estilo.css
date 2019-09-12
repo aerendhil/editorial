@@ -131,6 +131,7 @@ a:hover {
         float: right;
         display: block;
     }
+<<<<<<< HEAD
 
     .nav-busqueda {
         border-top: 2px solid #193944;
@@ -143,6 +144,8 @@ a:hover {
         margin-left: auto;
         margin-right: auto;
     }
+=======
+>>>>>>> origin/master
 }
 
 @media screen and (max-width: 600px) {
@@ -284,4 +287,24 @@ a:hover {
     word-wrap: break-word;
     float: center;
     margin-bottom: 0;
+}
+
+.footer {
+    background-color: #ce983f;
+    align-items: center;
+    display: block;
+}
+
+#logo-footer {
+    height: 100px;
+}
+
+.logo-footer {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.redes-footer {
+    margin-left: auto;
+    margin-right: auto;
 }
