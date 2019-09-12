@@ -188,6 +188,7 @@ a:hover {
     margin-top: 2%;
     min-width: 40%;
     max-width: 300px;
+    min-height: 80vh;
 }
 
 .form-control {
@@ -200,6 +201,7 @@ a:hover {
     margin-top: 2%;
     min-width: 40%;
     max-width: 300px;
+    min-height: 80vh;
 }
 
 .stretched-link {
