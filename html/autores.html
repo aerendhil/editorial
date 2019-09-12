@@ -16,16 +16,19 @@
         <!--CSS propio-->
         <link rel="stylesheet" href="/css/estilo.css">
         <title>Catálogo - Sic Mundus"</title>
+        <!-- Font awesome -->
+        <script src="https://kit.fontawesome.com/eea48fb8d0.js"></script>
     </head>
     <body>
         <header>
-            <div class="d-flex flex-wrap header-chico">
+            <div class="d-flex flex-wrap header-chico hepta-bold">
                 <div class="p-2">
                     <img class="logo-header" src="/img/logo.png" alt="logo--editorial">
                 </div>
+                <!-- Barra de navegación -->
                 <div class="p-2 flex-grow-1">
                     <div class="header-chico">
-                        <ul class="nav nav-pills nav-justified">
+                        <ul class="nav nav-pills nav-justified" id="menu">
                             <li class="nav-item">
                                 <a class="nav-link" href="/index.html">Home</a>
                             </li>
@@ -41,28 +44,21 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/html/contacto.html">Contacto</a>
                             </li>
+                            <li class="hamburguesa">
+                                <a href="javascript:void(0);" class=icon onclick="myFunction()"><i class="fas fa-bars fa-3x"></i></a>
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <!-- Barra de busqueda y botones con iconos-->
                 <div class="nav-busqueda">
                     <form class="form-inline">
-                        <div class="barra-busqueda">
-                            <input class="form-control mr-sm-2" type="text" placeholder="Buscar">
-                            <a href="" data-toggle="tooltip" title="Buscar" data-placement="bottom">
-                                <svg class="lnr lnr-magnifier">
-                                    <use xlink:href="#lnr-magnifier"></use>
-                                </svg>
-                            </a>
+                        <div class="barra-iconos">
                             <a href="/html/login.html" data-toggle="tooltip" title="Inicio de sesión" data-placement="bottom">
-                                <svg class="lnr lnr-user">
-                                    <use xlink:href="#lnr-user"></use>
-                                </svg>
+                                <i class="fas fa-user fa-2x"></i>
                             </a>
                             <a href="" data-toggle="tooltip" title="Carro de Compras" data-placement="bottom">
-                                <svg class="lnr lnr-cart">
-                                    <use xlink:href="#lnr-cart"></use>
-                                </svg>
+                                <i class="fas fa-shopping-cart fa-2x"></i>
                             </a>
                         </div>
                     </form>
@@ -111,5 +107,6 @@
                 </div>
             </div>
         </div>
+        <script src="/js/hamburguesa.js"></script>
     </body>
 </html>

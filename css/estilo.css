@@ -1,9 +1,9 @@
 /* Colores
-#EF616B
-#EF616B
-#F2EFE3
-#7DDEDB
-#3EABAC
+#ce983f
+#193944
+#ecebe4
+#ed6a5a
+#e4572e
 */
 @import url('https://fonts.googleapis.com/css?family=Hepta+Slab&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
@@ -85,7 +85,10 @@ header {
     position: absolute;
     right: 0;
     top: 0;
-    padding-right: 10px;
+    color: #193944;
+}
+
+.fas {
     color: #193944;
 }
 
@@ -98,6 +101,10 @@ a:hover {
 .logo-header {
     fill: #25565D;
     height: 60px;
+}
+
+.nav-busqueda{
+    width: 100%;
 }
 
 .barra-busqueda {
@@ -125,7 +132,17 @@ a:hover {
         display: block;
     }
 
-    .
+    .nav-busqueda {
+        border-top: 2px solid #193944;
+        /*border-bottom: 2px solid #193944;*/
+    }
+
+    .barra-iconos{
+        padding-top: 7px;
+        padding-bottom: 4px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 @media screen and (max-width: 600px) {
