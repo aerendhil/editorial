@@ -17,7 +17,8 @@ $("#form_registro").validate({
             lettersonly: true
         },
         "dtpNacimiento":{
-            required: true
+            required: true,
+            validarFecha: true
         },
         "txtTelefono":{
             required: true,
@@ -54,7 +55,8 @@ $("#form_registro").validate({
             lettersonly: "Ingrese solo letras."
         },
         "dtpNacimiento":{
-            required: "Ingrese su fecha de nacimiento."
+            required: "Ingrese su fecha de nacimiento.",
+            validarFecha: "La fecha de nacimiento debe ser anterior a 2001."
         },
         "txtTelefono": {
             required: "Ingrese su número de teléfono.",
@@ -84,10 +86,14 @@ jQuery.validator.addMethod("numbersonly", function(value, element) {
 }); 
 
 jQuery.validator.addMethod("validarRut", function(value, element){
-    return this.optional(element) || validar(value);
+    return this.optional(element) || rut(value);
 });
 
-function validar(rutCompleto){
+jQuery.validator.addMethod("validarFecha", function(value, element){
+    return this.optional(element) || fecha(value);
+});
+
+function rut(rutCompleto){
 	if ( rutCompleto.length == 0 ){ return false; }
 	if ( rutCompleto.length < 8 ){ return false; }
 
@@ -125,4 +131,13 @@ function validar(rutCompleto){
 	}
 	if ( dvr != drut.toLowerCase() ) { return false; }
 	else { return true; }
+}
+
+function fecha(fechaNacimiento){
+    var anioStr = fechaNacimiento.substring(6, fechaNacimiento.length);
+    var anioInt = parseInt(anioStr);
+
+    if (anioInt >= 2001) { return false; }
+    
+    return true;
 }
