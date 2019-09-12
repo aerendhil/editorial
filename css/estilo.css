@@ -104,7 +104,7 @@ a:hover {
 }
 
 .nav-busqueda{
-    width: 100%;
+    padding: 10px;
 }
 
 .barra-busqueda {
@@ -131,11 +131,12 @@ a:hover {
         float: right;
         display: block;
     }
-<<<<<<< HEAD
 
     .nav-busqueda {
-        border-top: 2px solid #193944;
-        /*border-bottom: 2px solid #193944;*/
+        width: 100%;
+        padding: 0;
+        word-spacing: 20px;
+        border-top: 2px dotted #F2EFE3;
     }
 
     .barra-iconos{
@@ -144,8 +145,6 @@ a:hover {
         margin-left: auto;
         margin-right: auto;
     }
-=======
->>>>>>> origin/master
 }
 
 @media screen and (max-width: 600px) {
