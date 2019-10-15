@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!--Bootstrap-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <!--JQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!--Iconos-->
+        <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+        <!--CSS propio-->
+        <link rel="stylesheet" href="/css/estilo.css">
+        <title>Catálogo - Sic Mundus"</title>
+        <!-- Font awesome -->
+        <script src="https://kit.fontawesome.com/eea48fb8d0.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="d-flex flex-wrap header-chico hepta-bold">
+                <div class="p-2">
+                    <a href="/index.html">
+                        <img class="logo-header" src="/img/logo.png" alt="logo--editorial">
+                    </a>
+                </div>
+                <!-- Barra de navegación -->
+                <div class="p-2 flex-grow-1">
+                    <div class="header-chico">
+                        <ul class="nav nav-pills nav-justified" id="menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/html/catalogo.html">Catálogo</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/html/autores.html">Autores</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/html/about.html">Quiénes Somos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/html/contacto.html">Contacto</a>
+                            </li>
+                            <li class="hamburguesa">
+                                <a href="javascript:void(0);" class=icon onclick="toggleMenu()"><i class="fas fa-bars fa-3x"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Barra de busqueda y botones con iconos-->
+                <div class="nav-busqueda">
+                    <form class="form-inline">
+                        <div class="barra-iconos">
+                            <a href="/html/login.html" data-toggle="tooltip" title="Inicio de sesión" data-placement="bottom">
+                                <i class="fas fa-user fa-2x"></i>
+                            </a>
+                            <a href="" data-toggle="tooltip" title="Carro de Compras" data-placement="bottom">
+                                <i class="fas fa-shopping-cart fa-2x"></i>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </header>
+        <div class="subheader hepta-bold">
+            <h1 class="titulo">Nuestros<br>Autores</h1>
+        </div>
+        <div class="autores hepta">
+            <div class="d-flex flex-wrap justify-content-center">
+                <!-- Autor #1 -->
+                <div class="d-flex flex-column p-2">
+                    <div class="card scale-up-center">
+                        <img class="autor card-img-top" src="/img/autores/FrankHerbert.jpeg" alt="Foto del autor Frank Herbert">
+                        <div class="card-body">Frank Herbert</div>
+                    </div>
+                </div>
+                <!-- Autor #2 -->
+                <div class="d-flex flex-column p-2">
+                    <div class="card">
+                        <img class="autor card-img-top" src="/img/autores/JRRTolkien.jpg" alt="Foto del autor J.R.R. Tolkien">
+                        <div class="card-body">J.R.R. Tolkien</div>
+                    </div>
+                </div>
+                <!-- Autor #3 -->
+                <div class="d-flex flex-column p-2">
+                    <div class="card">
+                        <img class="autor card-img-top" src="/img/autores/GeorgeOrwell.jpg" alt="Foto del autor George Orwell">
+                        <div class="card-body">George Orwell</div>
+                    </div>
+                </div>
+                <!-- Autor #5 -->
+                <div class="d-flex flex-column p-2">
+                    <div class="card">
+                        <img class="autor card-img-top" src="/img/autores/AldousHuxley.jpg" alt="Foto del autor Aldous Huxley">
+                        <div class="card-body">Aldous Huxley</div>
+                    </div>
+                </div>
+                <!-- Autor #6 -->
+                <div class="d-flex flex-column p-2">
+                    <div class="card">
+                        <img class="autor card-img-top" src="/img/autores/AnthonyBurgess.jpg" alt="Foto del autor Anthony Burguess">
+                        <div class="card-body">Anthony Burguess</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="d-flex flex-wrap footer">
+            <div class="d-flex flex-wrap p-2 logo-footer">
+                <img id="logo_footer" src="/img/logo.png" alt="logo-editorial">
+            </div>
+            <div class="d-flex flex-row p-2 redes">
+                <div><i class="fab fa-facebook-square fa-5x p-2 rrss-logo"></i></div>
+                <div><i class="fab fa-instagram fa-5x p-2 rrss-logo"></i></div>
+                <div><i class="fab fa-twitter-square fa-5x p-2 rrss-logo"></i></div>
+            </div>
+        </footer>
+        <script src="/js/hamburguesa.js"></script>
+    </body>
+</html>
