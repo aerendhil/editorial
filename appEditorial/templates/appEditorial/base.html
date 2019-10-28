@@ -21,7 +21,7 @@
         <header>
             <div class="d-flex flex-wrap header-chico hepta-bold">
                 <div class="p-2">
-                    <a href="/index.html">
+                    <a href="home">
                         <img class="logo-header" src="{% static 'img/logo.png' %}" alt="logo--editorial">
                     </a>
                 </div>
@@ -30,19 +30,19 @@
                     <div class="header-chico">
                         <ul class="nav nav-pills nav-justified" id="menu">
                             <li class="nav-item">
-                                <a class="nav-link {% block nav_class_home %}{% endblock nav_class_home %}" href="">Home</a>
+                                <a class="nav-link {% block nav_class_home %}{% endblock nav_class_home %}" href="home">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {% block nav_class_catalogo %}{% endblock nav_class_catalogo %}" href="/html/catalogo.html">Catálogo</a>
+                                <a class="nav-link {% block nav_class_catalogo %}{% endblock nav_class_catalogo %}" href="catalogo">Catálogo</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {% block nav_class_autores %}{% endblock nav_class_autores %}" href="/html/autores.html">Autores</a>
+                                <a class="nav-link {% block nav_class_autores %}{% endblock nav_class_autores %}" href="autores">Autores</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {% block nav_class_somos %}{% endblock nav_class_somos %}" href="/html/about.html">Quiénes Somos</a>
+                                <a class="nav-link {% block nav_class_somos %}{% endblock nav_class_somos %}" href="about">Quiénes Somos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {% block nav_class_contacto %}{% endblock nav_class_contacto %}" href="/html/contacto.html">Contacto</a>
+                                <a class="nav-link {% block nav_class_contacto %}{% endblock nav_class_contacto %}" href="contacto">Contacto</a>
                             </li>
                             <li class="hamburguesa">
                                 <a href="javascript:void(0);" class=icon onclick="toggleMenu()"><i class="fas fa-bars fa-3x"></i></a>
