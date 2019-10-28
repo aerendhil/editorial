@@ -1,0 +1,12 @@
+{% extends 'appEditorial/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+	<div id="header" class="d-flex flex-column encabezado"></div>
+
+	<h1>Agregar Usuario</h1>
+	<form method="POST">
+	{% csrf_token %}
+	{{ form }}
+	<button type="submit" class="save btn btn-default">Save</button>
+{% endblock %}
