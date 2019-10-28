@@ -218,7 +218,7 @@ a:hover {
 
 .btn-primary:hover {
     background-color: #92374d;
-}
+}1
 
 .autores {
     margin-left: auto;
@@ -323,4 +323,9 @@ a:hover {
 .destacado {
     color: #e4572e;
     font-weight: bold;
+}
+
+.parrafo {
+    padding: 80px 400px 80px 400px;
+    text-align: justify;
 }

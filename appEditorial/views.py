@@ -10,3 +10,6 @@ def catalogo(request):
 
 def autores(request):
     return render(request, 'appEditorial/autores.html')
+
+def about(request):
+    return render(request, 'appEditorial/about.html')
