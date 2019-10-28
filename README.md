@@ -1,6 +1,9 @@
 # Editorial
 
-# TODO
+## Creds
+noah - jonas
+
+## TODO
  
 1. Formulario con BDD
 2. Mantenedor del formulario
