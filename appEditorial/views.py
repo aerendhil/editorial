@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect
+from .forms import ContactoForm
+from .models import Contacto
 
 
 # Create your views here.
@@ -15,4 +17,13 @@ def about(request):
     return render(request, 'appEditorial/about.html')
 
 def contacto(request):
-    return render(request, 'appEditorial/contacto.html')
+    if request.method == "POST":
+        form = ContactoForm(request.POST)
+        if form.is_valid():
+            model_instance = form.save(commit = False)
+            model_instance.save()
+            return redirect('/editorial')
+    else:
+        form = ContactoForm()
+        return render(request,
+            "appEditorial/contacto.html", {'form': form})
