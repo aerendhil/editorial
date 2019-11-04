@@ -8,6 +8,11 @@
 @import url('https://fonts.googleapis.com/css?family=Hepta+Slab&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
 
+/* Global*/
+html, body {
+    height: 100%;
+}
+
 /* Fuentes */
 
 .hepta {
@@ -126,6 +131,21 @@ a:hover {
     color: #ecebe4;
 }
 
+ /* Contenedores */
+.parrafo {
+    padding: 80px 400px 0px 400px;
+    text-align: justify;
+}
+
+#contenedor {
+    min-height: 100%;
+}
+
+#main {
+    overflow: auto;
+    padding-bottom: 130px;
+}
+
 @media screen and (max-width: 600px) {
     .nav-item {
         display: none;
@@ -150,6 +170,10 @@ a:hover {
         margin-right: auto;
     }
 
+    .parrafo {
+        padding: 20px 50px 20px 50px;
+        text-align: justify;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -296,6 +320,10 @@ a:hover {
 .footer {
     background-color: #92374d;
     align-items: center;
+    position: relative;
+    height: 130px;
+    margin-top: -130px;
+    clear: both;
 }
 
 .solo-footer {
@@ -307,7 +335,7 @@ a:hover {
 }
 
 #logo-footer {
-    height: 100px;
+    height: 90%;
 }
 
 .logo-footer {
@@ -325,7 +353,4 @@ a:hover {
     font-weight: bold;
 }
 
-.parrafo {
-    padding: 80px 400px 80px 400px;
-    text-align: justify;
-}
+

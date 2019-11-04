@@ -13,3 +13,6 @@ def autores(request):
 
 def about(request):
     return render(request, 'appEditorial/about.html')
+
+def contacto(request):
+    return render(request, 'appEditorial/contacto.html')
