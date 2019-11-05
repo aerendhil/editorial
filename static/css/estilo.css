@@ -150,6 +150,8 @@ a:hover {
 
 #form-contacto {
     text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
 }
 
 @media screen and (max-width: 600px) {
