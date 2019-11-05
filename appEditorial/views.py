@@ -22,7 +22,7 @@ def contacto(request):
         if form.is_valid():
             model_instance = form.save(commit = False)
             model_instance.save()
-            return redirect('/editorial')
+            return redirect('/editorial/contacto')
     else:
         form = ContactoForm()
         return render(request,

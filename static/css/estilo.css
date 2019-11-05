@@ -146,6 +146,12 @@ a:hover {
     padding-bottom: 130px;
 }
 
+/* Formularios */
+
+#form-contacto {
+    text-align: center;
+}
+
 @media screen and (max-width: 600px) {
     .nav-item {
         display: none;

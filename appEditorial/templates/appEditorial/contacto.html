@@ -5,11 +5,11 @@
 {% block nav_class_contacto %}active{% endblock %}
 
 {% block content %}
-    <div id="header" class="d-flex flex-column encabezado"></div>
-
-    <h1>Agregar Usuario</h1>
-    <form method="POST">
+    <div class="subheader hepta-bold">
+        <h1 class="titulo">Contacto</h1>
+    </div>
+    <form method="POST" id="form-contacto nunito">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit" class="save btn btn-primary">Save</button>
+    <button type="submit" class="save btn btn-primary">Enviar</button>
 {% endblock %}
