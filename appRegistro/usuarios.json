@@ -1,0 +1,18 @@
+[
+	{
+		"model": "appRegistro.Usuario",
+		"pk": 1,
+		"fields": {
+			"run": 111,
+			"nombres": "Juanito Primero",
+			"apellidos": "Matta Matta",
+			"correo": "matta@correofalso.com",
+			"nacimiento": "1990-07-26",
+			"telefono": "3169915",
+			"region": "Metropolitana",
+			"ciudad": "Santiago",
+			"comuna": "Maipú",
+			"vivienda": "Casa"
+		}
+	}
+]

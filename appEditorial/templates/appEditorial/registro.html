@@ -1,12 +1,20 @@
 {% extends 'appEditorial/base.html' %}
 {% load staticfiles %}
-
 {% block content %}
 	<div id="header" class="d-flex flex-column encabezado"></div>
-
 	<h1>Agregar Usuario</h1>
 	<form method="POST">
-	{% csrf_token %}
-	{{ form }}
-	<button type="submit" class="save btn btn-default">Save</button>
-{% endblock %}
+		{% csrf_token %}
+		<!-- {{ form.as_p }} -->
+		<div class="d-flex flex-column align-items-center">
+			{% for field in form %}
+				<div class="input-group input-group-lg">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="inputGroup-sizing-lg">{{field.label}}</span>
+					</div>
+					{{field}}
+				</div>
+			{% endfor %}
+		</div>
+		<button type="submit" class="save btn btn-primary">Save</button>
+	{% endblock %}

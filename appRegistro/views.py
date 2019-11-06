@@ -12,6 +12,6 @@ def registro(request):
 			model_instance.save()
 			return redirect('/editorial')
 	else:
-		form = UsuarioForm()
+		formulario = UsuarioForm()
 		return render(request,
-			"appEditorial/registro.html", {'form': form})
+			"appEditorial/registro.html", {'form': formulario})
