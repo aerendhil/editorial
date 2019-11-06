@@ -5,7 +5,7 @@ noah - jonas
 
 ## TODO
  
-1. Formulario con BDD
+1. ~~Formulario con BDD~~
 2. Mantenedor del formulario
 3. Vista Listar
 	* Filtro 1
