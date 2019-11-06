@@ -24,3 +24,4 @@ noah - jonas
 	* ~~Cliente~~
 	* ~~Administrador~~
 9. Recuperación de Contraseña
+10. Pasar el botón de logeo y linkearlo
