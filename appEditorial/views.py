@@ -27,3 +27,6 @@ def contacto(request):
         form = ContactoForm()
         return render(request,
             "appEditorial/contacto.html", {'form': form})
+
+def login(request):
+    return render(request, 'appEditorial/login.html')
