@@ -14,5 +14,37 @@
 			"comuna": "Maipú",
 			"vivienda": "Casa"
 		}
+	},
+	{
+		"model": "appRegistro.Usuario",
+		"pk": 2,
+		"fields": {
+			"run": 222,
+			"nombres": "Gertrudiz Antonia",
+			"apellidos": "Rodriguez Palacios",
+			"correo": "garodriguez@correofalso.com",
+			"nacimiento": "1970-10-05",
+			"telefono": "95481113",
+			"region": "Metropolitana",
+			"ciudad": "Santiago",
+			"comuna": "Estacion Central",
+			"vivienda": "Casa"
+		}
+	},
+	{
+		"model": "appRegistro.Usuario",
+		"pk": 3,
+		"fields": {
+			"run": 333,
+			"nombres": "Fernando Nicolas",
+			"apellidos": "Gomez Urrutia",
+			"correo": "fergom@correofalso.com",
+			"nacimiento": "1985-03-15",
+			"telefono": "45684151",
+			"region": "Metropolitana",
+			"ciudad": "Santiago",
+			"comuna": "Maipú",
+			"vivienda": "Casa"
+		}
 	}
 ]
