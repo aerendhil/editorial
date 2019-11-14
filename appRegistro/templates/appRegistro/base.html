@@ -1,0 +1,43 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!--Bootstrap con Jquery -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <script src="{% static 'js/jquery-3.3.1.slim.min.js' %}"></script>
+        <script src="{% static 'js/popper.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <!--CSS propio-->
+        <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+        <title>Editorial Sic Mundus</title>
+        <!-- Font awesome -->
+        <script src="{% static 'fontawesome/js/all.js' %}"></script>
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+
+        </header>
+        <div id="contenedor">
+            <div id="main">
+        {% block content %}
+
+        {% endblock content %}
+            </div>
+        </div>
+        <footer class="d-flex flex-wrap footer">
+            <div class="d-flex flex-wrap p-2 logo-footer">
+                <img id="logo_footer" src="{% static 'img/logo.png' %}" alt="logo-editorial">
+            </div>
+            <div class="d-flex flex-row p-2 redes">
+                <div><i class="fab fa-facebook-square fa-5x p-2 rrss-logo"></i></div>
+                <div><i class="fab fa-instagram fa-5x p-2 rrss-logo"></i></div>
+                <div><i class="fab fa-twitter-square fa-5x p-2 rrss-logo"></i></div>
+            </div>
+        </footer>
+        <script src="/js/hamburguesa.js"></script>
+    </body>
+</html>

@@ -1,8 +1,9 @@
-{% extends 'appEditorial/base.html' %}
+{% extends 'appRegistro/base.html' %}
 {% load staticfiles %}
 {% block content %}
 	<div id="header" class="d-flex flex-column encabezado"></div>
 	<h1>Agregar Usuario</h1>
+	<a href='login'>Volver</a>
 	<form method="POST">
 		{% csrf_token %}
 		<!-- {{ form.as_p }} -->

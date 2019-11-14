@@ -16,8 +16,11 @@ def registro(request):
 	else:
 		formulario = UsuarioForm()
 		return render(request,
-			"appEditorial/registro.html", {'form': formulario})
+			"appRegistro/registro.html", {'form': formulario})
 
 
 def listar_usuarios(request):
     return render(request, "appRegistro/listar_usuarios.html")
+
+def login(request):
+    return render(request, 'appRegistro/login.html')
