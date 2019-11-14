@@ -13,3 +13,6 @@ class Usuario(models.Model):
 	ciudad = models.CharField(max_length=50, default = "no_asignado")
 	comuna = models.CharField(max_length=50, default = "no_asignado")
 	vivienda = models.CharField(max_length=50, default = "no_asignado")
+
+	def __str__(self):
+		return self.run
