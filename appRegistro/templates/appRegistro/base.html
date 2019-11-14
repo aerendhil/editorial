@@ -12,22 +12,30 @@
         <script src="{% static 'js/bootstrap.min.js' %}"></script>
         <!--CSS propio-->
         <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
-        <title>Editorial Sic Mundus</title>
+        <title>Administrador Editorial</title>
         <!-- Font awesome -->
         <script src="{% static 'fontawesome/js/all.js' %}"></script>
     </head>
     <body>
         <!-- Header -->
         <header>
-
+            <div class="header-chico">
+                <ul class="nav">
+                    <li class="nav-item">
+                    <a class="nav-link {% block nav_class_home %}{% endblock nav_class_home %}" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link {% block nav_class_login %}{% endblock nav_class_login %}" href="login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link {% block nav_class_gestion %}{% endblock nav_class_gestion %}" href="#">Gestion Editorial</a>
+                    </li>
+                </ul>
+            </div>
         </header>
-        <div id="contenedor">
-            <div id="main">
         {% block content %}
 
         {% endblock content %}
-            </div>
-        </div>
         <footer>
 
         </footer>
