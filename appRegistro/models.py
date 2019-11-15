@@ -1,18 +1,18 @@
 from django.db import models
+from django.contrib.auth.models import User
 import datetime
 
-# Create your models here.
-class Usuario(models.Model):
-	run = models.CharField(max_length=20, default = "no_asignado")
-	nombres = models.CharField(max_length=50, default = "no_asignado")
-	apellidos = models.CharField(max_length=50, default = "no_asignado")
-	correo = models.EmailField(max_length=254, default = "no_asignado")
-	nacimiento = models.DateField(auto_now=False, auto_now_add=False, default= datetime.date(1997, 10, 19))
-	telefono = models.CharField(max_length=50, default = "no_asignado")
-	region = models.CharField(max_length=50, default = "no_asignado")
-	ciudad = models.CharField(max_length=50, default = "no_asignado")
-	comuna = models.CharField(max_length=50, default = "no_asignado")
-	vivienda = models.CharField(max_length=50, default = "no_asignado")
+
+class PerfilUsuario(models.Model):
+	user = models.OneToOneField(User, on_delete=models.CASCADE)
+	run = models.CharField(max_length=20,)
+	nacimiento = models.DateField(auto_now=False, auto_now_add=False)
+	telefono = models.CharField(max_length=50)
+	region = models.CharField(max_length=50)
+	ciudad = models.CharField(max_length=50)
+	comuna = models.CharField(max_length=50)
+	vivienda = models.CharField(max_length=50)
 
 	def __str__(self):
 		return self.run
+

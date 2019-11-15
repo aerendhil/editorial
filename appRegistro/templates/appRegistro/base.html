@@ -12,32 +12,49 @@
         <script src="{% static 'js/bootstrap.min.js' %}"></script>
         <!--CSS propio-->
         <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
-        <title>Administrador Editorial</title>
         <!-- Font awesome -->
         <script src="{% static 'fontawesome/js/all.js' %}"></script>
+        <title>
+        {% block titulo %}
+        {% endblock titulo %}
+        </title>
     </head>
     <body>
         <!-- Header -->
         <header>
-            <div class="header-chico">
-                <ul class="nav">
-                    <li class="nav-item">
-                    <a class="nav-link {% block nav_class_home %}{% endblock nav_class_home %}" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link {% block nav_class_login %}{% endblock nav_class_login %}" href="login">Login</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link {% block nav_class_gestion %}{% endblock nav_class_gestion %}" href="#">Gestion Editorial</a>
-                    </li>
-                </ul>
+            <div class="flex-grow-1">
+                <div class="header-chico">
+                    <ul class="nav d-flex justify-content-end ">
+                        <li class="nav-item">
+                            <a class="nav-link {% block nav_class_editorial %}{% endblock nav_class_editorial %}" href="#">Editorial Sic Mundus</a> {#pendiente#}
+                        </li>
+                        {% if not request.user.is_authenticated %}
+                            <li class="nav-item">
+                                <a class="nav-link {% block nav_class_login %}{% endblock nav_class_login %}" href="login">Login</a>
+                            </li>
+                        {% else %}
+                            <li class="nav-item">
+                                <a class="nav-link {% block nav_class_home %}{% endblock nav_class_home %}" href="index">Home</a> {#pendiente#}
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {% block nav_class_gestion %}{% endblock nav_class_gestion %}" href="#">Gestion Editorial</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {% block nav_class_logout %}{% endblock nav_class_logout %}" href="logout">Cerrar Sesion</a>
+                            </li>
+                        {% endif %}
+                        <li class="hamburguesa">
+                            <a href="javascript:void(0);" class=icon onclick="toggleMenu()"><i class="fas fa-bars fa-3x"></i></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </header>
-        {% block content %}
-
-        {% endblock content %}
+        <div class="contenedor">
+            {% block content %}
+            {% endblock content %}
+        </div>
         <footer>
-
         </footer>
         <script src="/js/hamburguesa.js"></script>
     </body>

@@ -1,21 +1,18 @@
 {% extends 'appRegistro/base.html' %}
 {% load staticfiles %}
 {% block content %}
-	<div id="header" class="d-flex flex-column encabezado"></div>
-	<h1>Agregar Usuario</h1>
-	<a href='login'>Volver</a>
-	<form method="POST">
-		{% csrf_token %}
-		<!-- {{ form.as_p }} -->
-		<div class="d-flex flex-column align-items-center">
-			{% for field in form %}
-				<div class="input-group input-group-lg">
-					<div class="input-group-prepend">
-						<span class="input-group-text" id="inputGroup-sizing-lg">{{field.label}}</span>
-					</div>
-					{{field}}
-				</div>
-			{% endfor %}
-		</div>
-		<button type="submit" class="save btn btn-primary">Save</button>
-	{% endblock %}
+    <div class="jumbotron">
+        {% if registrado %}
+            <h1>Gracias por registrarte</h1>
+        {% else %}
+            <h1>Registro</h1>
+            <h3>Completa los siguientes datos:</h3>
+            <form enctype="mutlipart/form-data" method="POST">
+                {% csrf_token %}
+                {{ user_form.as_p }}
+                {{ profile_form.as_p }}
+                <button type="submit" class="btn btn-primary">Registrar</button>
+            </form>
+        {% endif %}
+    </div>
+{% endblock content %}
