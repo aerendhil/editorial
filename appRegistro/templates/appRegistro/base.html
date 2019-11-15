@@ -30,17 +30,17 @@
                         </li>
                         {% if not request.user.is_authenticated %}
                             <li class="nav-item">
-                                <a class="nav-link {% block nav_class_login %}{% endblock nav_class_login %}" href="login">Login</a>
+                                <a class="nav-link {% block nav_class_login %}{% endblock nav_class_login %}" href="{% url 'appRegistro:login' %}">Login</a>
                             </li>
                         {% else %}
                             <li class="nav-item">
-                                <a class="nav-link {% block nav_class_home %}{% endblock nav_class_home %}" href="index">Home</a> {#pendiente#}
+                                <a class="nav-link {% block nav_class_home %}{% endblock nav_class_home %}" href="{% url 'appRegistro:index' %}">Home</a> {#pendiente#}
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link {% block nav_class_gestion %}{% endblock nav_class_gestion %}" href="#">Gestion Editorial</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {% block nav_class_logout %}{% endblock nav_class_logout %}" href="logout">Cerrar Sesion</a>
+                                <a class="nav-link {% block nav_class_logout %}{% endblock nav_class_logout %}" href="{% url 'appRegistro:logout' %}">Cerrar Sesion</a>
                             </li>
                         {% endif %}
                         <li class="hamburguesa">

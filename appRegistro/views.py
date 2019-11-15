@@ -18,10 +18,7 @@ def usuario_logout(request):
 
 def usuario_login(request):
 	if request.user.is_authenticated:
-		if request.user.is_superuser:
-			return HttpResponseRedirect(reverse('appRegistro:index'))
-		else:
-			return HttpResponseRedirect(reverse('appEditorial:home'))
+		return HttpResponseRedirect(reverse('appRegistro:index'))
 	else:
 		if request.method == 'POST':
 			username = request.POST.get('username')

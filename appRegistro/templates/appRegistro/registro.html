@@ -1,5 +1,6 @@
 {% extends 'appRegistro/base.html' %}
 {% load staticfiles %}
+{% block titulo %}Registrar usuario{% endblock titulo %}
 {% block content %}
     <div class="jumbotron">
         {% if registrado %}
@@ -7,7 +8,7 @@
         {% else %}
             <h1>Registro</h1>
             <h3>Completa los siguientes datos:</h3>
-            <form enctype="mutlipart/form-data" method="POST">
+            <form enctype="multipart/form-data" method="POST">
                 {% csrf_token %}
                 {{ user_form.as_p }}
                 {{ profile_form.as_p }}

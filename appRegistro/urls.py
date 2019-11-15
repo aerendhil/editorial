@@ -1,10 +1,10 @@
-from django.urls import path, include
+from django.conf.urls import url
 from . import views
+app_name = 'appRegistro'
 
 urlpatterns = [
-	#path('registro', views.registro),
-    path('index', views.index),
-    path('login', views.usuario_login),
-    path('logout', views.usuario_logout),
-    path('registro', views.registrar),
+    url('index/', views.index, name = 'index'),
+    url('login/', views.usuario_login, name = 'login'),
+    url('logout/', views.usuario_logout, name = 'logout'),
+    url('registro/', views.registrar, name = 'registro'),
 ]
