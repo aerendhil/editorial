@@ -12,15 +12,16 @@ class Autor(models.Model):
 	apellido_p = models.CharField(max_length=50)
 	apellido_m = models.CharField(max_length=50)
 	fecha_nacimiento = models.DateField(auto_now=False, auto_now_add=False)
-	foto = models.ImageField()
+	foto = models.ImageField(default='/static/img/triquetra.png')
 
 class Editorial(models.Model):
 	nombre = models.CharField(max_length=50)
-	logo = models.ImageField()
+	logo = models.ImageField(default='/static/img/triquetra.png')
 
 class Libro(models.Model):
 	titulo = models.CharField(max_length=100)
 	fecha_publicacion = models.DateField(auto_now=False, auto_now_add=False)
+	portada = models.ImageField(default='/static/img/triquetra.png')
 	precio = models.IntegerField()
 	stock = models.IntegerField()
 	isbn = models.IntegerField()

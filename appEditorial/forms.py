@@ -16,10 +16,10 @@ class ContactoForm(ModelForm):
 class LibroForm(ModelForm):
 	class Meta:
 		model = Libro
-		fields = [ 'titulo', 'fecha_publicacion', 'precio', 'stock', 'isbn', 'autor', 'editorial' ]
+		fields = [ 'titulo', 'fecha_publicacion', 'precio', 'stock', 'isbn', 'autor', 'editorial', 'portada' ]
 		widgets = {
 			'fecha_publicacion': forms.SelectDateWidget(
-				years=(range(1900,2020))
+				years=(range(2020,1900, -1))
 				),
 			'isbn': forms.TextInput(),
 		}
@@ -28,7 +28,11 @@ class AutorForm(ModelForm):
 	class Meta:
 		model = Autor
 		fields = [ 'nombre', 'apellido_p', 'apellido_m', 'fecha_nacimiento', 'foto'  ]
-
+		widgets = {
+			'fecha_nacimiento': forms.SelectDateWidget(
+				years=(range(2020,1500, -1))
+				),
+		}
 class EditorialForm(ModelForm):
 	class Meta:
 		model = Editorial

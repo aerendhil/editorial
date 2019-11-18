@@ -46,5 +46,22 @@ def agregar_libro(request):
             'libro_form': form
         })
 
+def agregar_autor(request):
+    if request.method == "POST":
+        form = AutorForm(request.POST)
+        if form.is_valid():
+            model_instance = form.save(commit = False)
+            model_instance.save()
+            message.info(request, 'autor registrado con éxito')
+            return HttpResponseRedirect(reverse('appEditorial:agregar_autor'))
+        else:
+            message.info(request, 'No se ha podido registrar el autor')
+            return HttpResponseRedirect(reverse('appEditorial:agregar_autor'))
+    else:
+        form = AutorForm()
+    return render(request, 'appEditorial/agregarautor.html',
+        {
+            'autor_form': form
+        })
 
 
