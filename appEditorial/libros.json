@@ -1,0 +1,100 @@
+[
+	{
+		"model": "appEditorial.Libro",
+		"pk": 1,
+		"fields": {
+			"titulo": "La Comunidad del Anillo",
+			"fecha_publicacion": "2001-11-01",
+			"portada": "/libros/comunidad_del_anillo.jpg",
+			"precio": 10000,
+			"stock": 20,
+			"isbn": 9789505470679,
+			"autor": 1,
+			"editorial": 1
+		}
+	},
+	{
+		"model": "appEditorial.Libro",
+		"pk": 2,
+		"fields": {
+			"titulo": "Las Dos Torres",
+			"fecha_publicacion": "2009-06-01",
+			"portada": "/libros/las_dos_torres.jpg",
+			"precio": 10000,
+			"stock": 20,
+			"isbn": 9788445073735,
+			"autor": 1,
+			"editorial": 1
+		}
+	},
+	{
+		"model": "appEditorial.Libro",
+		"pk": 3,
+		"fields": {
+			"titulo": "El Retorno del Rey",
+			"fecha_publicacion": "2006-07-01",
+			"portada": "/libros/retorno_del_rey.jpg",
+			"precio": 10000,
+			"stock": 20,
+			"isbn": 9788445075753,
+			"autor": 1,
+			"editorial": 1
+		}
+	},
+	{
+		"model": "appEditorial.Libro",
+		"pk": 4,
+		"fields": {
+			"titulo": "El Hobbit ilustrado por Jemima Catlin",
+			"fecha_publicacion": "2013-12-01",
+			"portada": "/libros/el_hobbit.jpg",
+			"precio": 20000,
+			"stock": 20,
+			"isbn": 9788445001516,
+			"autor": 1,
+			"editorial": 1
+		}
+	},
+	{
+		"model": "appEditorial.Libro",
+		"pk": 5,
+		"fields": {
+			"titulo": "Cuentos Inconclusos",
+			"fecha_publicacion": "1998-10-01",
+			"portada": "/libros/cuentos_inconclusos.jpg",
+			"precio": 9000,
+			"stock": 20,
+			"isbn": 9788445072912,
+			"autor": 1,
+			"editorial": 1
+		}
+	},
+	{
+		"model": "appEditorial.Libro",
+		"pk": 6,
+		"fields": {
+			"titulo": "Dune",
+			"fecha_publicacion": "2007-10-01",
+			"portada": "/libros/dune.jpg",
+			"precio": 10000,
+			"stock": 20,
+			"isbn": 9788497596824,
+			"autor": 3,
+			"editorial": 2
+		}
+	},
+	{
+		"model": "appEditorial.Libro",
+		"pk": 7,
+		"fields": {
+			"titulo": "La cruzada de las máquinas",
+			"fecha_publicacion": "2007-06-01",
+			"portada": "/libros/dune_la_cruzada_de_las_maquinas.jpg",
+			"precio": 10000,
+			"stock": 20,
+			"isbn": 9788483463659,
+			"autor": 4,
+			"editorial": 2
+		}
+	}
+]

@@ -1,0 +1,18 @@
+[
+	{
+		"model": "appEditorial.Editorial",
+		"pk": 1,
+		"fields": {
+			"nombre": "Minotauro",
+			"logo": "/editoriales/Minotauro.png"
+		}
+	},
+	{
+		"model": "appEditorial.Editorial",
+		"pk": 2,
+		"fields": {
+			"nombre": "Debolsillo",
+			"logo": "/editoriales/Debolsillo.png"
+		}
+	}
+]
