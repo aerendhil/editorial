@@ -33,7 +33,7 @@ class PerfilUsuarioForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super(PerfilUsuarioForm, self).__init__(*args, **kwargs)
         self.fields['run'].widget.attrs.update({'class': 'form-control'})
-        self.fields['nacimiento'].widget.attrs.update({'class': 'form-control'})
+        self.fields['nacimiento'].widget.attrs.update({'class': 'form-control datepicker'})
         self.fields['telefono'].widget.attrs.update({'class': 'form-control'})
         self.fields['region'].widget.attrs.update({'class': 'form-control'})
         self.fields['ciudad'].widget.attrs.update({'class': 'form-control'})

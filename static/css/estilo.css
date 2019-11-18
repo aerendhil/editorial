@@ -459,6 +459,11 @@ a:hover {
         -webkit-animation:slide-top .6s cubic-bezier(.25,.46,.45,.94) both;animation:slide-top .6s cubic-bezier(.25,.46,.45,.94) both
 }
 
+.datepicker {
+    display: inline;
+    width: 100px;
+}
+
 /* --- ANIMACIONES --- */
 
 .slide-top{-webkit-animation:slide-top .6s cubic-bezier(.25,.46,.45,.94) both;animation:slide-top .6s cubic-bezier(.25,.46,.45,.94) both}
@@ -471,4 +476,3 @@ a:hover {
  * ---------------------------------------------- */
 
 @-webkit-keyframes slide-top{0%{-webkit-transform:translateY(0);transform:translateY(0)}25%{-webkit-transform:translateY(-25px);transform:translateY(-25px)}}@keyframes slide-top{0%{-webkit-transform:translateY(0);transform:translateY(0)}25%{-webkit-transform:translateY(-25px);transform:translateY(-25px)}}
-
