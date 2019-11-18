@@ -58,8 +58,15 @@
                                 <a href="{% url 'appRegistro:login' %}" data-toggle="tooltip" title="Inicio de sesión" data-placement="bottom">
                                     <i class="fas fa-user fa-2x boton-nav"></i>
                                 </a>
+                            {% elif request.user.is_superuser %}
+                                <a href="{% url 'appRegistro:gestion' %}" data-toggle="tooltip" title="Administrar" data-placement="bottom">
+                                    <i class="fas fa-user-cog fa-2x boton-nav"></i>
+                                </a>
+                                <a href="{% url 'appRegistro:logout' %}" data-toggle="tooltip" title="Cerrar Sesion" data-placement="bottom">
+                                    <i class="fas fa-power-off fa-2x boton-nav"></i>
+                                </a>
                             {% else %}
-                                 <a href="" data-toggle="tooltip" title="Carro de Compras" data-placement="bottom">
+                                <a href="" data-toggle="tooltip" title="Carro de Compras" data-placement="bottom">
                                     <i class="fas fa-shopping-cart fa-2x boton-nav"></i>
                                 </a>
                                 <a href="{% url 'appRegistro:logout' %}" data-toggle="tooltip" title="Cerrar Sesion" data-placement="bottom">

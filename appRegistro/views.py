@@ -3,6 +3,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 from django.contrib import messages
+
 from .forms import PerfilUsuarioForm, RegistrarForm
 from .models import PerfilUsuario
 from appEditorial import templates
@@ -33,16 +34,18 @@ def usuario_login(request):
 			password = request.POST.get('password')
 			user = authenticate(username=username, password=password)
 			if user:
-				if user.is_active and user.is_superuser:
+				if not user.is_active:
+					messages.info(request, 'Tu cuenta esta inactiva')
+					return HttpResponseRedirect(reverse('appRegistro:login'))
+				elif user.is_active and user.is_superuser:
 					login(request, user)
 					return HttpResponseRedirect(reverse('appRegistro:index'))
 				elif user.is_active and not user.is_superuser:
 					login(request, user)
 					return HttpResponseRedirect(reverse('appEditorial:home'))
-				else:
-					return HttpResponse("Tu cuenta esta inactiva.")
 			else:
-				return HttpResponse("Datos invalidos.")
+				messages.info(request, 'Clave o Contraseña inválidas')
+				return HttpResponseRedirect(reverse('appRegistro:login'))
 		else:
 			return render(request, 'appRegistro/login.html')
 
