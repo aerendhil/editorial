@@ -24,6 +24,5 @@ class Libro(models.Model):
 	precio = models.IntegerField()
 	stock = models.IntegerField()
 	isbn = models.IntegerField()
-	autor = models.ForeignKey('Autor')
-	editorial = models.ForeignKey('Editorial')
-
+	autor = models.ForeignKey('Autor', on_delete='CASCADE')
+	editorial = models.ForeignKey('Editorial', on_delete='CASCADE')
