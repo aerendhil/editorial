@@ -74,8 +74,8 @@ def registrar(request):
 					{'user_form': user_form,
 					'profile_form': profile_form})
 
-def gestionar(request):
-	return render(request, 'appRegistro/gestion.html')
 
-def gestionarEditorial(request):	
+def gestionarEditorial(request):
 	return render(request, 'appEditorial/mantenedor_home.html')
+
+

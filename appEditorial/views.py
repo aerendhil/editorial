@@ -35,6 +35,11 @@ def contacto(request):
         return render(request,
             "appEditorial/contacto.html", {'form': form})
 
+
+def gestionarLibros(request):
+    return render(request, 'appEditorial/gestionarLibros.html')
+
+
 def agregar_libro(request):
     if request.method == "POST":
         form = LibroForm(request.POST)

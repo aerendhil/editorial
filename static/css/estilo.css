@@ -11,6 +11,7 @@ html, body {
     --light: #b9546d;
     --dark: #193944;
     --light_white: #ecebe4;
+    --light_white_bright: #f4f4f0;
     --accent_1: #ed6a5a;
     --accent_2: #25ced1;
 }
@@ -57,6 +58,30 @@ header {
     align-items: center;
     font-family: 'Hepta Slab', serif;
     font-weight: bold;
+}
+
+.nav-gestion {
+    background-color: var(--light_white_bright);
+}
+
+
+/* botones nav gestion*/
+
+#boton-agregar, #boton-editar, #boton-eliminar {
+    font-family: 'Hepta Slab', serif;
+}
+
+#boton-agregar .nav-link, #boton-editar .nav-link, #boton-eliminar .nav-link {
+    color: var(--dark);
+}
+
+#boton-agregar .nav-link:hover, #boton-editar .nav-link:hover, #boton-eliminar .nav-link:hover {
+    color: var(--light);
+}
+
+#boton-agregar .nav-link.active, #boton-editar .nav-link.active, #boton-eliminar .nav-link.active {
+    color: var(--light);
+    background-color: var(--light_white);
 }
 /* botones header */
 

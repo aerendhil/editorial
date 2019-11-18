@@ -1,10 +1,10 @@
 {% extends 'appRegistro/base.html' %}
 {% load staticfiles %}
-{% block titulo %}Iniciar sesion{% endblock titulo %}
-{% block nav_class_login %}active{% endblock nav_class_login %}
+{% block titulo %}Gestionar Editorial{% endblock titulo %}
+{% block nav_class_gestion %}active{% endblock nav_class_gestion %}
 {% block content %}
 	<div class="d-flex flex-row gestion">
-		<div class="p-2 flex-fill nunito-bold libros" onclick="location.href={% url 'appEditorial:agregar_libro' %}">
+		<div class="p-2 flex-fill nunito-bold libros" onclick="location.href={% url 'appEditorial:gestionLibros' %}">
 			Libros <br>
 			<span  style="font-size: 72px" >
 				<i class="fas fa-book"></i>
