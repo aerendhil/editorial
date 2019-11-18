@@ -26,7 +26,7 @@
                 <div class="header-chico">
                     <ul class="nav d-flex justify-content-end ">
                         <li class="nav-item">
-                            <a class="nav-link {% block nav_class_editorial %}{% endblock nav_class_editorial %}" href="#">Editorial Sic Mundus</a> {#pendiente#}
+                            <a class="nav-link {% block nav_class_editorial %}{% endblock nav_class_editorial %}" href="{% url 'appEditorial:home' %}">Editorial Sic Mundus</a> 
                         </li>
                         {% if not request.user.is_authenticated %}
                             <li class="nav-item">
