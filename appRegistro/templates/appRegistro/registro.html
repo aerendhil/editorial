@@ -3,19 +3,17 @@
 {% load crispy_forms_tags %}
 {% block titulo %}Registrar usuario{% endblock titulo %}
 {% block content %}
-    <div>
-        <div class="titulo-registro">
-            <h1>Formulario de Registro</h1>
-            <h3>Completa los siguientes datos:</h4>
-        </div>
-        <div class="form-registro d-flex justify-content-center">
-            <form enctype="multipart/form-data" method="POST">
-                {% csrf_token %}
-                {{ user_form|crispy }}
-                {{ profile_form|crispy }}
-                <br>
-                <button type="submit" class="btn btn-primary">Registrar</button>
-            </form>
-        </div>
+    <div id="titulo-registro" class="subheader">
+        <h1 class="hepta-bold">Formulario de Registro</h1>
+        <h4 class="hepta">Completa los siguientes datos:</h4>
+    </div>
+    <div class="form-registro d-flex justify-content-center">
+        <form enctype="multipart/form-data" method="POST">
+            {% csrf_token %}
+            {{ user_form|crispy }}
+            {{ profile_form|crispy }}
+            <br>
+            <button type="submit" class="btn btn-primary">Registrar</button>
+        </form>
     </div>
 {% endblock content %}

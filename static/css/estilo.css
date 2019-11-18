@@ -145,20 +145,33 @@ a:hover {
 
 .contenedor {
     background-color: var(--light_white);
+    min-height: 100%;
+    padding-bottom: -130px;
 }
 
-#contenedor {
+#contenedor-dos {
     min-height: 100%;
+    padding-bottom: -130px;
 }
 
 #main {
     overflow: auto;
-    padding-bottom: 130px;
 }
 
 #bienvenida {
     padding-top: 20px;
     font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    padding-bottom: 130px;
+}
+
+.desc {
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+}
+
+#titulo-registro {
+    padding-top: 40px;
     font-size: 18px;
 }
 
@@ -178,18 +191,8 @@ a:hover {
 .form-registro {
     min-height: 76vh;
     padding-top: 20px;
-    padding-bottom: 160px;
     font-family: 'Nunito', sans-serif;
     font-size: 18px;
-}
-
-.titulo-registro {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    text-align: center;
-    background-color: var(--dark);
-    color: white;
-    font-family: 'Nunito', sans-serif;
 }
 
 @media screen and (max-width: 600px) {
@@ -259,6 +262,7 @@ a:hover {
     min-width: 40%;
     max-width: 300px;
     min-height: 75vh;
+    padding-bottom: -130px;
 }
 
 .form-control {
@@ -379,7 +383,6 @@ a:hover {
 .footer {
     background-color: var(--light);
     align-items: center;
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
