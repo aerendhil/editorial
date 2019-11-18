@@ -48,7 +48,6 @@ def usuario_login(request):
 
 
 def registrar(request):
-	registrado = False
 	if request.method == 'POST':
 		print("Estoy intentando ingresar un usuario")
 		user_form = RegistrarForm(data=request.POST)
@@ -60,7 +59,6 @@ def registrar(request):
 			profile = profile_form.save(commit=False)
 			profile.user = user
 			profile.save()
-			registrado = True
 			messages.info(request, 'Usuario Registrado Correctamente')
 			return HttpResponseRedirect(reverse('appRegistro:login'))
 		else:
@@ -71,8 +69,7 @@ def registrar(request):
 
 	return render(request, 'appRegistro/registro.html',
 					{'user_form': user_form,
-					'profile_form': profile_form,
-					'registrado': registrado})
+					'profile_form': profile_form})
 
 def gestionar(request):
 	return render(request, 'appRegistro/gestion.html')

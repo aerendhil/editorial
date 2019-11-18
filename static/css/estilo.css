@@ -160,6 +160,7 @@ a:hover {
 #bienvenida {
     padding-top: 20px;
     font-family: 'Nunito', sans-serif;
+    font-size: 18px;
 }
 
 /* Formularios */
@@ -170,8 +171,19 @@ a:hover {
     font-size: 14px;
 }
 
-#form-registro {
-    align-items: center;
+.form-registro {
+    padding-top: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+}
+
+.titulo-registro {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: var(--dark);
+    color: white;
+    font-family: 'Nunito', sans-serif;
 }
 
 @media screen and (max-width: 600px) {
@@ -437,7 +449,7 @@ a:hover {
 
 .gestion .editoriales:hover {
     background-color: var(--accent_1);
-    -webkit-animation:slide-top .6s cubic-bezier(.25,.46,.45,.94) both;animation:slide-top .6s cubic-bezier(.25,.46,.45,.94) both
+        -webkit-animation:slide-top .6s cubic-bezier(.25,.46,.45,.94) both;animation:slide-top .6s cubic-bezier(.25,.46,.45,.94) both
 }
 
 /* --- ANIMACIONES --- */
@@ -452,3 +464,4 @@ a:hover {
  * ---------------------------------------------- */
 
 @-webkit-keyframes slide-top{0%{-webkit-transform:translateY(0);transform:translateY(0)}25%{-webkit-transform:translateY(-25px);transform:translateY(-25px)}}@keyframes slide-top{0%{-webkit-transform:translateY(0);transform:translateY(0)}25%{-webkit-transform:translateY(-25px);transform:translateY(-25px)}}
+

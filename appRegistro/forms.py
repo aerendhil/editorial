@@ -56,6 +56,9 @@ class RegistrarForm(ModelForm):
             'first_name': 'Nombre',
             'last_name': 'Apellido'
         }
+        help_texts = {
+            'username': ''
+        }
 
 
     def __init__(self, *args, **kwargs):
