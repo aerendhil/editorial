@@ -8,6 +8,7 @@
         {% else %}
             <h1>Registro</h1>
             <h3>Completa los siguientes datos:</h3>
+            <br>
             <form enctype="multipart/form-data" method="POST">
                 {% csrf_token %}
                 {{ user_form.as_p }}
