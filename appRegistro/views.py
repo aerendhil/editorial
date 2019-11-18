@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
+from django.contrib import messages
 from .forms import PerfilUsuarioForm, RegistrarForm
 from .models import PerfilUsuario
 from appEditorial import templates
@@ -49,6 +50,7 @@ def usuario_login(request):
 def registrar(request):
 	registrado = False
 	if request.method == 'POST':
+		print("Estoy intentando ingresar un usuario")
 		user_form = RegistrarForm(data=request.POST)
 		profile_form = PerfilUsuarioForm(data=request.POST)
 		if user_form.is_valid() and profile_form.is_valid():
@@ -59,6 +61,8 @@ def registrar(request):
 			profile.user = user
 			profile.save()
 			registrado = True
+			messages.info(request, 'Usuario Registrado Correctamente')
+			return HttpResponseRedirect(reverse('appRegistro:login'))
 		else:
 			return HttpResponse("Datos invalidos.")
 	else:
@@ -70,3 +74,5 @@ def registrar(request):
 					'profile_form': profile_form,
 					'registrado': registrado})
 
+def gestionar(request):
+	return render(request, 'appRegistro/gestion.html')

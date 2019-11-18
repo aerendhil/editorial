@@ -369,4 +369,38 @@ a:hover {
     font-weight: bold;
 }
 
+.gestion .libros {
+    background-color: #193944;
+    color: #ecebe4;
+    height: 100vh;
+    font-size: 24px;
+    text-align: center;
+}
 
+.gestion .autores {
+    background-color: #193944;
+    color: #ecebe4;
+    height: 100vh;
+    font-size: 24px;
+    text-align: center;
+}
+
+.gestion .editoriales {
+    background-color: #193944;
+    color: #ecebe4;
+    height: 100vh;
+    font-size: 24px;
+    text-align: center;
+}
+
+.gestion .libros:hover {
+    background-color: #ed6a5a;
+}
+
+.gestion .autores:hover {
+    background-color: #ed6a5a;
+}
+
+.gestion .editoriales:hover {
+    background-color: #ed6a5a;
+}
