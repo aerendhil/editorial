@@ -1,0 +1,19 @@
+{% extends 'appRegistro/base.html' %}
+{% load staticfiles %}
+{% block titulo %}Gestionar Libros{% endblock titulo %}
+{% block nav_class_gestion %}active{% endblock nav_class_gestion %}
+{% block nav_content %}
+<div class="nav-gestion d-flex justify-content-end">
+    <ul class="nav nav-tabs">
+        <li id="boton-agregar" class="nav-item">
+            <a class="nav-link {% block nav_class_agregar %}{% endblock nav_class_agregar %}" href="{% url 'appEditorial:agregar_libro' %}">Agregar Libros</a>
+        </li>
+        <li id="boton-editar" class="nav-item">
+            <a class="nav-link {% block nav_class_editar %}{% endblock nav_class_editar %}" href="#!">Editar Libros</a>
+        </li>
+        <li id="boton-eliminar" class="nav-item">
+            <a class="nav-link {% block nav_class_eliminar %}{% endblock nav_class_eliminar %}" href="#!">Eliminar Libros</a>
+        </li>
+    </ul>
+</div>
+{% endblock nav_content %}
