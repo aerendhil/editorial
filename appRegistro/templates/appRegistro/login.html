@@ -3,6 +3,13 @@
 {% block titulo %}Iniciar sesion{% endblock titulo %}
 {% block nav_class_login %}active{% endblock nav_class_login %}
 {% block content %}
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
     <div class="login p-2">
         <h1>Inicio de Sesion</h1>
         <br>

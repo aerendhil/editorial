@@ -3,5 +3,10 @@
 {% block titulo %}Iniciar sesion{% endblock titulo %}
 {% block nav_class_login %}active{% endblock nav_class_login %}
 {% block content %}
-    HOLI
+	<div class="d-flex flex-row gestion">
+		<div class="p-2 flex-fill nunito-bold libros"
+		onclick="location.href={% url 'appEditorial:home' %}">Libros</div>
+		<div class="p-2 flex-fill nunito-bold autores">Autores</div>
+		<div class="p-2 flex-fill nunito-bold editoriales">Editoriales</div>
+	</div>
 {% endblock content %}
