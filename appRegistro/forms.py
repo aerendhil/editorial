@@ -38,7 +38,7 @@ class PerfilUsuarioForm(ModelForm):
 
 
 class RegistrarForm(ModelForm):
-    password = forms.CharField(widget=forms.PasswordInput())
+    password = forms.CharField(widget=forms.PasswordInput(), label='Contraseña')
 
     class Meta:
         model = User
