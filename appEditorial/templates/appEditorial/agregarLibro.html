@@ -1,12 +1,18 @@
 {% extends 'appRegistro/base.html' %}
 {% load staticfiles %}
+{% load crispy_forms_tags %}
 {% block titulo %}Iniciar sesion{% endblock titulo %}
 {% block nav_class_login %}active{% endblock nav_class_login %}
 {% block content %}
-	{% csrf_token %}
-    <form enctype="multipart/form-data" method="POST">
-        {% csrf_token %}
-		{{ libro_form.as_p }}
-        <button type="submit" class="btn btn-primary">Registrar</button>
-    </form>
+	<div class="subheader">
+		<h1 class="titulo hepta-bold">Ingresar Libro</h1>
+	</div>
+    <div class="form-registro d-flex justify-content-center">
+        <form enctype="multipart/form-data" method="POST">
+            {% csrf_token %}
+            {{ libro_form|crispy }}
+            <br>
+            <button type="submit" class="btn btn-primary">Registrar</button>
+        </form>
+    </div>
 {% endblock content %}

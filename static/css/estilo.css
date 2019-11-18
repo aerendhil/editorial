@@ -145,7 +145,6 @@ a:hover {
 
 .contenedor {
     background-color: var(--light_white);
-    min-height: 100%;
 }
 
 #contenedor {
@@ -169,6 +168,11 @@ a:hover {
     text-align: center;
     font-family: 'Nunito', sans-serif;
     font-size: 14px;
+}
+
+.form-libro {
+    max-width: 50vw;
+    padding-left: 5vh;
 }
 
 .form-registro {
