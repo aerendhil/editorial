@@ -1,9 +1,11 @@
 {% extends 'appRegistro/base.html' %}
-{% include 'appEditorial/gestionarLibros.html' %}
 {% load staticfiles %}
 {% load crispy_forms_tags %}
 {% block titulo %}Ingresar libro{% endblock titulo %}
 {% block nav_class_agregar %}active{% endblock nav_class_agregar %}
+{% block nav_content %}
+    {% include 'appEditorial/base_nav_libros.html' %}
+{% endblock nav_content %}
 {% block content %}
 	<div class="subheader">
 		<h1 class="titulo hepta-bold">Ingresar Libro</h1>
