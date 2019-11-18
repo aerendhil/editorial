@@ -176,6 +176,7 @@ a:hover {
 }
 
 .form-registro {
+    min-height: 76vh;
     padding-top: 20px;
     padding-bottom: 160px;
     font-family: 'Nunito', sans-serif;

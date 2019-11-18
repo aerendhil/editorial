@@ -1,4 +1,5 @@
-from django.forms import ModelForm, forms
+from django.forms import ModelForm
+from django import forms
 from .models import Contacto, Autor, Editorial, Libro
 
 class ContactoForm(ModelForm):
@@ -16,6 +17,12 @@ class LibroForm(ModelForm):
 	class Meta:
 		model = Libro
 		fields = [ 'titulo', 'fecha_publicacion', 'precio', 'stock', 'isbn', 'autor', 'editorial' ]
+		widgets = {
+			'fecha_publicacion': forms.SelectDateWidget(
+				years=(range(1900,2020))
+				),
+			'isbn': forms.TextInput(),
+		}
 
 class AutorForm(ModelForm):
 	class Meta:
