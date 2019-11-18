@@ -12,8 +12,12 @@ def index(request):
 
 
 def usuario_logout(request):
-	logout(request)
-	return HttpResponseRedirect(reverse('appRegistro:login'))
+	if request.user.is_superuser:
+		logout(request)
+		return HttpResponseRedirect(reverse('appRegistro:login'))
+	else:
+		logout(request)
+		return HttpResponseRedirect(reverse('appEditorial:home'))
 
 
 def usuario_login(request):
