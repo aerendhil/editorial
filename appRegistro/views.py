@@ -68,7 +68,8 @@ def registrar(request):
 	else:
 		user_form = RegistrarForm()
 		profile_form = PerfilUsuarioForm()
-		return render(request, 'appRegistro/registro.html',
+
+	return render(request, 'appRegistro/registro.html',
 					{'user_form': user_form,
 					'profile_form': profile_form,
 					'registrado': registrado})
