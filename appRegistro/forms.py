@@ -57,6 +57,7 @@ class RegistrarForm(ModelForm):
             'last_name': 'Apellido'
         }
 
+
     def __init__(self, *args, **kwargs):
         super(RegistrarForm, self).__init__(*args, **kwargs)
         self.fields['username'].widget.attrs.update({'class': 'form-control'})

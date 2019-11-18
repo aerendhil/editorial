@@ -145,6 +145,11 @@ a:hover {
     padding-bottom: 130px;
 }
 
+#bienvenida {
+    padding-top: 20px;
+    font-family: 'Nunito', sans-serif;
+}
+
 /* Formularios */
 
 #form-contacto {

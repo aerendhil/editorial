@@ -18,16 +18,22 @@ def usuario_logout(request):
 
 def usuario_login(request):
 	if request.user.is_authenticated:
-		return HttpResponseRedirect(reverse('appRegistro:index'))
+		if request.user.is_superuser:
+			return HttpResponseRedirect(reverse('appRegistro:index'))
+		else:
+			return HttpResponseRedirect(reverse('appEditorial:home'))
 	else:
 		if request.method == 'POST':
 			username = request.POST.get('username')
 			password = request.POST.get('password')
 			user = authenticate(username=username, password=password)
 			if user:
-				if user.is_active:
+				if user.is_active and user.is_superuser:
 					login(request, user)
 					return HttpResponseRedirect(reverse('appRegistro:index'))
+				elif user.is_active and not user.is_superuser:
+					login(request, user)
+					return HttpResponseRedirect(reverse('appEditorial:home'))
 				else:
 					return HttpResponse("Tu cuenta esta inactiva.")
 			else:
