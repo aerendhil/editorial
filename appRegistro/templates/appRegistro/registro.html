@@ -1,5 +1,6 @@
 {% extends 'appRegistro/base.html' %}
 {% load staticfiles %}
+{% load crispy_forms_tags %}
 {% block titulo %}Registrar usuario{% endblock titulo %}
 {% block content %}
     <div>
@@ -10,8 +11,9 @@
         <div class="form-registro d-flex justify-content-center">
             <form enctype="multipart/form-data" method="POST">
                 {% csrf_token %}
-                {{ user_form.as_p }}
-                {{ profile_form.as_p }}
+                {{ user_form|crispy }}
+                {{ profile_form|crispy }}
+                <br>
                 <button type="submit" class="btn btn-primary">Registrar</button>
             </form>
         </div>

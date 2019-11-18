@@ -25,6 +25,10 @@ class PerfilUsuarioForm(ModelForm):
             'comuna': 'Comuna',
             'vivienda': 'Vivienda'
         }
+        widgets = {
+            'nacimiento': forms.SelectDateWidget(
+                years=(range(2020, 1900, -1)))
+        }
 
     def __init__(self, *args, **kwargs):
         super(PerfilUsuarioForm, self).__init__(*args, **kwargs)
