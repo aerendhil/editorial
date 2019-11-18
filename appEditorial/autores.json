@@ -1,0 +1,46 @@
+[
+	{
+		"model": "appEditorial.Autor",
+		"pk": 1,
+		"fields": {
+			"nombre": "J.R.",
+			"apellido_p": "R.",
+			"apellido_m": "Tolkien",
+			"fecha_nacimiento": "1892-03-01",
+			"foto": "/autores/JRRTolkien.jpg"
+		}
+	},
+	{
+		"model": "appEditorial.Autor",
+		"pk": 2,
+		"fields": {
+			"nombre": "George",
+			"apellido_p": "Orwell",
+			"apellido_m": "",
+			"fecha_nacimiento": "1903-06-25",
+			"foto": "/autores/GeorgeOrwell.jpg"
+		}
+	},
+	{
+		"model": "appEditorial.Autor",
+		"pk": 3,
+		"fields": {
+			"nombre": "Frank",
+			"apellido_p": "Herbert",
+			"apellido_m": "",
+			"fecha_nacimiento": "1920-10-08",
+			"foto": "/autores/FrankHerbert.jpeg"
+		}
+	},
+		{
+		"model": "appEditorial.Autor",
+		"pk": 4,
+		"fields": {
+			"nombre": "Brian",
+			"apellido_p": "Herbert",
+			"apellido_m": "",
+			"fecha_nacimiento": "1920-10-08",
+			"foto": "/autores/BrianHerbert.jpg"
+		}
+	}
+]
