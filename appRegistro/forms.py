@@ -38,7 +38,7 @@ class PerfilUsuarioForm(ModelForm):
 
 
 class RegistrarForm(ModelForm):
-    password = forms.CharField(widget=forms.PasswordInput())
+    password = forms.CharField(widget=forms.PasswordInput(), label='Contraseña')
 
     class Meta:
         model = User
@@ -56,6 +56,7 @@ class RegistrarForm(ModelForm):
             'first_name': 'Nombre',
             'last_name': 'Apellido'
         }
+
 
     def __init__(self, *args, **kwargs):
         super(RegistrarForm, self).__init__(*args, **kwargs)

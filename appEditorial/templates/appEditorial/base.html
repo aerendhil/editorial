@@ -54,12 +54,18 @@
                 <div class="nav-busqueda">
                     <form class="form-inline">
                         <div class="barra-iconos">
-                            <a href="{% url 'appRegistro:login' %}" data-toggle="tooltip" title="Inicio de sesión" data-placement="bottom">
-                                <i class="fas fa-user fa-2x"></i>
-                            </a>
-                            <a href="" data-toggle="tooltip" title="Carro de Compras" data-placement="bottom">
-                                <i class="fas fa-shopping-cart fa-2x"></i>
-                            </a>
+                            {% if not request.user.is_authenticated %}
+                                <a href="{% url 'appRegistro:login' %}" data-toggle="tooltip" title="Inicio de sesión" data-placement="bottom">
+                                    <i class="fas fa-user fa-2x"></i>
+                                </a>
+                            {% else %}
+                                 <a href="" data-toggle="tooltip" title="Carro de Compras" data-placement="bottom">
+                                    <i class="fas fa-shopping-cart fa-2x"></i>
+                                </a>
+                                <a href="{% url 'appRegistro:logout' %}" data-toggle="tooltip" title="Cerrar Sesion" data-placement="bottom">
+                                    <i class="fas fa-power-off fa-2x"></i>
+                                </a>
+                            {% endif %}
                         </div>
                     </form>
                 </div>
