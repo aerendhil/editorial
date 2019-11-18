@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .forms import ContactoForm
+from .forms import ContactoForm, LibroForm
 from .models import Contacto
 
 
@@ -27,5 +27,24 @@ def contacto(request):
         form = ContactoForm()
         return render(request,
             "appEditorial/contacto.html", {'form': form})
+
+def agregar_libro(request):
+    if request.method == "POST":
+        form = LibroForm(request.POST)
+        if form.is_valid():
+            model_instance = form.save(commit = False)
+            model_instance.save()
+            message.info(request, 'Libro registrado con éxito')
+            return HttpResponseRedirect(reverse('appEditorial:agregar_libro'))
+        else:
+            message.info(request, 'No se ha podido registrar el libro')
+            return HttpResponseRedirect(reverse('appEditorial:agregar_libro'))
+    else:
+        form = LibroForm()
+    return render(request, 'appEditorial/agregarLibro.html',
+        {
+            'libro_form': form
+        })
+
 
 

@@ -76,3 +76,6 @@ def registrar(request):
 
 def gestionar(request):
 	return render(request, 'appRegistro/gestion.html')
+
+def gestionarEditorial(request):	
+	return render(request, 'appEditorial/mantenedor_home.html')

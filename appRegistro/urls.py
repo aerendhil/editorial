@@ -9,4 +9,5 @@ urlpatterns = [
     url('logout/', views.usuario_logout, name = 'logout'),
     url('registro/', views.registrar, name = 'registro'),
     url('gestion/', views.gestionar, name = 'gestion'),
+    url('gestionEditorial/', views.gestionarEditorial, name = 'gestionEditorial'),
 ]

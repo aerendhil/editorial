@@ -11,4 +11,5 @@ urlpatterns = [
     url('autores/', views.autores, name = 'autores'),
     url('about/', views.about, name = 'about'),
     url('contacto/', views.contacto, name = 'contacto'),
+    url('agregar_libro/', views.agregar_libro, name = 'agregar_libro')
 ]
