@@ -7,72 +7,18 @@
         </div>
         <div class="catalogo p-4 nunito">
             <div class="d-flex flex-wrap justify-content-center">
-                <!-- Portada #1-->
-                <div class="d-flex flex-column p-2">
-                    <div class="card">
-                        <img class="portada card-img-top" src="{% static 'img/portadas/comunidad_del_anillo.jpg' %}" alt="Foto de la portada de La comunidad del anillo ">
-                        <div class="card-body">
-                            <span class="badge badge-titulo">Título</span> La comunidad del anillo <br>
-                            <span class="badge badge-autor">Autor</span> J.R.R. Tolkien <br>
-                            <span class="badge badge-precio">Precio</span> $12.000
+                {% for libro in catalogo %}
+                    <div class="d-flex flex-column p-2">
+                        <div class="card">
+                            <img class="portada card-img-top" src="{{ libro.portada.url }}" alt="Foto de la portada de {{ libro.titulo }} {{ libro.portada.url }} ">
+                            <div class="card-body">
+                                <span class="badge badge-titulo">Título</span> {{ libro.titulo }} <br>
+                                <span class="badge badge-autor">Autor</span> {{ libro.autor }} <br>
+                                <span class="badge badge-precio">Precio</span> {{ libro.precio }}
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- Portada #2-->
-                <div class="d-flex flex-column p-2">
-                    <div class="card">
-                        <img class="portada card-img-top" src="{% static 'img/portadas/las_dos_torres.jpg' %}" alt="Foto de la portada de Las Dos Torres">
-                        <div class="card-body">
-                            <span class="badge badge-titulo">Título</span> Las Dos Torres<br>
-                            <span class="badge badge-autor">Autor</span> J.R.R. Tolkien <br>
-                            <span class="badge badge-precio">Precio</span> $12.000
-                        </div>
-                    </div>
-                </div>
-                <!-- Portada #3-->
-                <div class="d-flex flex-column p-2">
-                    <div class="card">
-                        <img class="portada card-img-top" src="{% static 'img/portadas/retorno_del_rey.jpg' %}" alt="Foto de la portada de El Retorno del Rey">
-                        <div class="card-body">
-                            <span class="badge badge-titulo">Título</span> El Retorno del Rey<br>
-                            <span class="badge badge-autor">Autor</span> J.R.R. Tolkien <br>
-                            <span class="badge badge-precio">Precio</span> $12.000
-                        </div>
-                    </div>
-                </div>
-                <!-- Portada #4-->
-                <div class="d-flex flex-column p-2">
-                    <div class="card">
-                        <img class="portada card-img-top" src="{% static 'img/portadas/dune.jpg' %}" alt="Foto de la portada de Dune">
-                        <div class="card-body">
-                            <span class="badge badge-titulo">Título</span> Dune<br>
-                            <span class="badge badge-autor">Autor</span> Frank Herbert <br>
-                            <span class="badge badge-precio">Precio</span> $12.000
-                        </div>
-                    </div>
-                </div>
-                <!-- Portada #5-->
-                <div class="d-flex flex-column p-2">
-                    <div class="card">
-                        <img class="portada card-img-top" src="{% static 'img/portadas/dune_la_cruzada_de_las_maquinas.jpg' %}" alt="Foto de la portada de Dune: La cruzada de las máquinas">
-                        <div class="card-body">
-                            <span class="badge badge-titulo">Título</span> Dune: La cruzada de las máquinas<br>
-                            <span class="badge badge-autor">Autor</span> Frank Herbert <br>
-                            <span class="badge badge-precio">Precio</span> $12.000
-                        </div>
-                    </div>
-                </div>
-                <!-- Portada #6-->
-                <div class="d-flex flex-column p-2">
-                    <div class="card">
-                        <img class="portada card-img-top" src="{% static 'img/portadas/dune_la_batalla_de_corrin.jpg' %}" alt="Foto de la portada de Dune: La batalla de Corrin">
-                        <div class="card-body">
-                            <span class="badge badge-titulo">Título</span> Dune: La batalla de Corrin<br>
-                            <span class="badge badge-autor">Autor</span> Frank Herbert <br>
-                            <span class="badge badge-precio">Precio</span> $12.000
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
         <br>

@@ -4,7 +4,7 @@ from django.urls import reverse
 from django.contrib import messages
 
 from .forms import ContactoForm, LibroForm, AutorForm, EditorialForm
-from .models import Contacto
+from .models import Contacto, Libro
 
 
 # Create your views here.
@@ -12,7 +12,10 @@ def home(request):
 	return render(request, 'appEditorial/home.html')
 
 def catalogo(request):
-	return render(request, 'appEditorial/catalogo.html')
+    catalogo = Libro.objects.all()
+    return render(
+        request, 'appEditorial/catalogo.html', {'catalogo': catalogo}
+        )
 
 def autores(request):
     return render(request, 'appEditorial/autores.html')
@@ -38,10 +41,10 @@ def agregar_libro(request):
         if form.is_valid():
             model_instance = form.save(commit = False)
             model_instance.save()
-            message.info(request, 'Libro registrado con éxito')
+            messages.info(request, 'Libro registrado con éxito')
             return HttpResponseRedirect(reverse('appEditorial:agregar_libro'))
         else:
-            message.info(request, 'No se ha podido registrar el libro')
+            messages.info(request, 'No se ha podido registrar el libro')
             return HttpResponseRedirect(reverse('appEditorial:agregar_libro'))
     else:
         form = LibroForm()
@@ -56,10 +59,10 @@ def agregar_autor(request):
         if form.is_valid():
             model_instance = form.save(commit = False)
             model_instance.save()
-            message.info(request, 'Autor registrado con éxito')
+            messages.info(request, 'Autor registrado con éxito')
             return HttpResponseRedirect(reverse('appEditorial:agregar_autor'))
         else:
-            message.info(request, 'No se ha podido registrar el autor')
+            messages.info(request, 'No se ha podido registrar el autor')
             return HttpResponseRedirect(reverse('appEditorial:agregar_autor'))
     else:
         form = AutorForm()
@@ -74,10 +77,10 @@ def agregar_editorial(request):
         if form.is_valid():
             model_instance = form.save(commit = False)
             model_instance.save()
-            message.info(request, 'Editorial registrada con éxito')
+            messages.info(request, 'Editorial registrada con éxito')
             return HttpResponseRedirect(reverse('appEditorial:agregar_editorial'))
         else:
-            message.info(request, 'No se ha podido registrar la editorial')
+            messages.info(request, 'No se ha podido registrar la editorial')
             return HttpResponseRedirect(reverse('appEditorial:agregar_editorial'))
     else:
         form = EditorialForm()

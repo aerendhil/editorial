@@ -24,6 +24,7 @@ class LibroForm(ModelForm):
 			'isbn': forms.TextInput(),
 		}
 
+
 class AutorForm(ModelForm):
 	class Meta:
 		model = Autor
@@ -33,6 +34,7 @@ class AutorForm(ModelForm):
 				years=(range(2020,1500, -1))
 				),
 		}
+
 class EditorialForm(ModelForm):
 	class Meta:
 		model = Editorial
