@@ -5,6 +5,12 @@ class ContactoForm(ModelForm):
     class Meta:
         model = Contacto
         fields = ['correo', 'nombre', 'telefono', 'mensaje']
+        labels = {
+            'correo': 'Correo',
+            'nombre': 'Nombre',
+            'telefono': 'Teléfono',
+            'mensaje': 'Mensaje'
+        }
 
 class LibroForm(ModelForm):
 	class Meta:

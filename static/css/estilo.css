@@ -166,8 +166,19 @@ a:hover {
     font-size: 14px;
 }
 
-#form-registro {
-    align-items: center;
+.form-registro {
+    padding-top: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+}
+
+.titulo-registro {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: var(--dark);
+    color: white;
+    font-family: 'Nunito', sans-serif;
 }
 
 @media screen and (max-width: 600px) {
