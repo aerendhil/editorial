@@ -13,6 +13,7 @@ urlpatterns = [
     path('', views.home),
 	url('home/', views.home, name = 'home'),
 	url('catalogo/', views.catalogo, name = 'catalogo'),
+    url(r'catalogo$', views.catalogo_filtro, name = 'catalogo_filtro'),
     url('autores/', views.autores, name = 'autores'),
     url('about/', views.about, name = 'about'),
     url('contacto/', views.contacto, name = 'contacto'),

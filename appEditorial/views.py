@@ -13,10 +13,15 @@ def home(request):
 
 def catalogo(request):
     catalogo = Libro.objects.all()
+    filtros = LibroFilter(request.GET, queryset=Libro.objects.all())
     return render(
-        request, 'appEditorial/catalogo.html', {'catalogo': catalogo}
+        request, 'appEditorial/catalogo.html', {'catalogo': catalogo}, {'filtros': filtros}
         )
-
+def catalogo_filtro(request):
+    filtro = LibroFilter(request.GET, queryset=Libro.objects.all())
+    return render(
+        request, 'appEditorial/catalogo.html', {'filtros': filtro}
+        )
 def autores(request):
     autores = Autor.objects.all()
     return render(request, 'appEditorial/autores.html', {'autores': autores})

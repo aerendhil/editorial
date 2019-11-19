@@ -1,18 +1,37 @@
 {% extends 'appEditorial/base.html' %}
 {% load staticfiles %}
+{% load crispy_forms_tags %}
+
 {% block nav_class_catalogo %}active{% endblock nav_class_catalogo %}
+
 {% block content %}
         <div class="subheader hepta-bold">
             <h1 class="titulo">Nuestro<br>Catálogo</h1>
         </div>
-        <!-- Search form -->
-        <div class="buscador">
-            <form class="form-inline md-form form-sm">
-                <input class="form-control form-control-sm mr-2" type="text" 
-                    placeholder="Autor" aria-label="Search" id="myInput">
-                <i class="fas fa-search" aria-hidden="true"></i>
+        <div class=form-busqueda>
+            <form action="" method="GET">
+                {{ filtros.form|crispy }}
+                <br>
+                <input type="submit" value="Buscar"/>
             </form>
         </div>
+        <div class="catalogo p-4 nunito">
+            <div class="d-flex flex-wrap justify-content-center">
+            {% for libro in filtros.qs %}
+                <div class="d-flex flex-column p-2">
+                    <div class="card">
+                        <img class="portada card-img-top" src="{{ libro.portada.url }}" alt="Foto de la portada de {{ libro.titulo }} {{ libro.portada.url }} ">
+                        <div class="card-body">
+                            <span class="badge badge-titulo">Título</span> {{ libro.titulo }} <br>
+                            <span class="badge badge-autor">Autor</span> {{ libro.autor }} <br>
+                            <span class="badge badge-precio">Precio</span> {{ libro.precio }}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+        
         <div class="catalogo p-4 nunito">
             <div class="d-flex flex-wrap justify-content-center">
                 {% for libro in catalogo %}
@@ -31,14 +50,5 @@
         </div>
         <br>
         <script>
-        $(document).ready(function(){
-          $("#myInput").on("keyup", function() {
-            var value = $(this).val().toLowerCase();
-            $("#myTable tr").filter(function() {
-              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-            });
-          });
-        });
         </script>
-
 {% endblock content %}

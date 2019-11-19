@@ -496,6 +496,12 @@ a:hover {
     width: 100px;
 }
 
+.form-busqueda {
+    padding-left: 100px;
+    display: block;
+    align-self: center;
+}
+
 /* --- ANIMACIONES --- */
 
 .slide-top{-webkit-animation:slide-top .6s cubic-bezier(.25,.46,.45,.94) both;animation:slide-top .6s cubic-bezier(.25,.46,.45,.94) both}
