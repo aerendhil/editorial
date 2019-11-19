@@ -66,16 +66,7 @@ def agregar_libro(request):
 
 
 def editar_libro(request, libro_id):
-    instancia = Libro.objects.get(id=libro_id)
-    form = LibroForm(instance=instancia)
-
-    if request.method == "POST":
-        form = LibroForm(request.POST, instance=instancia)
-        if form.is_valid():
-            instancia = form.save(commit=False)
-            instancia.save()
-    return render(request, "appEditorial/editar_libro.html", {'libro_form': form})
-
+    pass
 
 def agregar_autor(request):
     if request.method == "POST":
