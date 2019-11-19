@@ -9,7 +9,7 @@ from . import views
 
 app_name = 'appEditorial'
 
-urlpatterns = [
+urlpatterns = static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + [
     path('', views.home),
 	url('home/', views.home, name = 'home'),
 	url('catalogo/', views.catalogo, name = 'catalogo'),
@@ -25,4 +25,4 @@ urlpatterns = [
     url('editar_libro/', views.editar_libro, name = 'editar_libro'),
     url('agregar_autor/', views.agregar_autor, name = 'agregar_autor'),
     url('agregar_editorial/', views.agregar_editorial, name = 'agregar_editorial'),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
