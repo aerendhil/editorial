@@ -2,8 +2,16 @@
 {% load staticfiles %}
 {% block nav_class_catalogo %}active{% endblock nav_class_catalogo %}
 {% block content %}
-	        <div class="subheader hepta-bold">
+        <div class="subheader hepta-bold">
             <h1 class="titulo">Nuestro<br>Catálogo</h1>
+        </div>
+        <!-- Search form -->
+        <div class="buscador">
+            <form class="form-inline md-form form-sm">
+                <input class="form-control form-control-sm mr-2" type="text" 
+                    placeholder="Autor" aria-label="Search" id="myInput">
+                <i class="fas fa-search" aria-hidden="true"></i>
+            </form>
         </div>
         <div class="catalogo p-4 nunito">
             <div class="d-flex flex-wrap justify-content-center">
@@ -22,4 +30,15 @@
             </div>
         </div>
         <br>
+        <script>
+        $(document).ready(function(){
+          $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function() {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+          });
+        });
+        </script>
+
 {% endblock content %}

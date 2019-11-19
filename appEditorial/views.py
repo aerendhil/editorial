@@ -5,7 +5,7 @@ from django.contrib import messages
 
 from .forms import ContactoForm, LibroForm, AutorForm, EditorialForm
 from .models import Contacto, Libro, Autor
-
+from .filters import LibroFilter
 
 # Create your views here.
 def home(request):
