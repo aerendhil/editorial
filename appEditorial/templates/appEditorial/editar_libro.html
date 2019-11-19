@@ -1,0 +1,21 @@
+{% extends 'appRegistro/base.html' %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+{% block titulo %}Ingresar libro{% endblock titulo %}
+{% block nav_class_gestion %}active{% endblock nav_class_gestion %}
+{% block nav_content %}
+    {% include 'appEditorial/base_nav_libros.html' %}
+{% endblock nav_content %}
+{% block content %}
+    <div class="subheader">
+        <h1 class="titulo hepta-bold">Editar Libro</h1>
+    </div>
+    <div class="form-editar d-flex justify-content-center">
+        <form enctype="multipart/form-data" method="POST">
+            {% csrf_token %}
+            {{ libro_form|crispy }}
+            <br>
+            <button type="submit" class="btn btn-primary">Editar</button>
+        </form>
+    </div>
+{% endblock content %}
