@@ -18,6 +18,7 @@ urlpatterns = [
     url('contacto/', views.contacto, name = 'contacto'),
     url('gestionLibros/', views.gestionarLibros, name = 'gestionLibros'),
     url('agregar_libro/', views.agregar_libro, name = 'agregar_libro'),
+    url('editar_libro/<int:carrera_id>', views.editar_libro, name = 'editar_libro'),
     url('agregar_autor/', views.agregar_autor, name = 'agregar_autor'),
     url('agregar_editorial/', views.agregar_editorial, name = 'agregar_editorial'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
