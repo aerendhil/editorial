@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'appRegistro',
     'appEditorial',
     'crispy_forms',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
