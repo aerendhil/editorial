@@ -8,12 +8,14 @@
     <div class="autores hepta">
         <div class="d-flex flex-wrap justify-content-center">
             <!-- Autor #1 -->
-            <div class="d-flex flex-column p-2">
-                <div class="card scale-up-center">
-                    <img class="autor card-img-top" src="{% static 'img/autores/FrankHerbert.jpeg' %}" alt="Foto del autor Frank Herbert">
-                    <div class="card-body">Frank Herbert</div>
+            {% for autor in autores %}
+                <div class="d-flex flex-column p-2">
+                    <div class="card scale-up-center">
+                        <img class="autor card-img-top" src="{{ autor.foto.url }}" alt="Foto del autor {{ autor }} - {{ autor.foto.url }}">
+                        <div class="card-body">{{ autor }}</div>
+                    </div>
                 </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}

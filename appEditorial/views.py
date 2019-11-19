@@ -4,7 +4,7 @@ from django.urls import reverse
 from django.contrib import messages
 
 from .forms import ContactoForm, LibroForm, AutorForm, EditorialForm
-from .models import Contacto, Libro
+from .models import Contacto, Libro, Autor
 
 
 # Create your views here.
@@ -18,7 +18,8 @@ def catalogo(request):
         )
 
 def autores(request):
-    return render(request, 'appEditorial/autores.html')
+    autores = Autor.objects.all()
+    return render(request, 'appEditorial/autores.html', {'autores': autores})
 
 def about(request):
     return render(request, 'appEditorial/about.html')

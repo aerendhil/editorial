@@ -4,7 +4,7 @@
 		"pk": 1,
 		"fields": {
 			"nombre": "Minotauro",
-			"logo": "/editoriales/Minotauro.png"
+			"logo": "editoriales/Minotauro.png"
 		}
 	},
 	{
@@ -12,7 +12,7 @@
 		"pk": 2,
 		"fields": {
 			"nombre": "Debolsillo",
-			"logo": "/editoriales/Debolsillo.png"
+			"logo": "editoriales/Debolsillo.png"
 		}
 	}
 ]
