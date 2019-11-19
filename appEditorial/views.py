@@ -22,6 +22,13 @@ def catalogo_filtro(request):
     return render(
         request, 'appEditorial/catalogo.html', {'filtros': filtro}
         )
+
+def editar_libros(request):
+    filtro = LibroFilter(request.GET, queryset=Libro.objects.all())
+    return render(
+        request, 'appEditorial/seleccionar_libros.html', {'filtros': filtro}
+        )
+
 def autores(request):
     autores = Autor.objects.all()
     return render(request, 'appEditorial/autores.html', {'autores': autores})
@@ -65,9 +72,31 @@ def agregar_libro(request):
         })
 
 
-def editar_libro(request, libro_id):
-    pass
+def editar_libro(request):
+    libro_id = request.GET['id']
+    libro = Libro.objects.get(id=libro_id)
+    if request.method == "POST":
+        form = LibroForm(request.POST, instance=libro)
+        if form.is_valid():
+            model_instance = form.save(commit = False)
+            model_instance.save()
+            return HttpResponseRedirect(reverse('appEditorial:editar_libros'))
+        else:
+            return HttpResponseRedirect(reverse('appEditorial:editar_libros'))
+    else:
+        form = LibroForm(instance=libro)
+        return render(request, 'appEditorial/editar_libro.html',
+            {
+                'libro_form': form
+            })
 
+def eliminar_libro(request):
+    libro_id = request.GET['id']
+    libro = Libro.objects.get(id=libro_id)
+    libro.delete()
+    messages.info(request, 'Libro eliminado correctamente')
+    return HttpResponseRedirect(reverse('appEditorial:editar_libros'))
+    
 def agregar_autor(request):
     if request.method == "POST":
         form = AutorForm(request.POST)

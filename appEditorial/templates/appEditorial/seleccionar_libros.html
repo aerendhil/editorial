@@ -1,0 +1,43 @@
+{% extends 'appRegistro/base.html' %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+{% block titulo %}Ingresar libro{% endblock titulo %}
+{% block nav_class_gestion %}active{% endblock nav_class_gestion %}
+{% block nav_content %}
+{% include 'appEditorial/base_nav_libros.html' %}
+{% endblock nav_content %}
+{% block content %}
+	<div class="subheader">
+	    <h1 class="titulo hepta-bold">Editar Libro</h1>
+	</div>
+    {% if messages %}
+        {% for message in messages %}
+            <p class="mensaje">{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+	<div class=form-busqueda>
+	    <form action="" method="GET">
+	        {{ filtros.form|crispy }}
+	        <br>
+	        <input type="submit" value="Buscar" />
+	    </form>
+	</div>
+	<div class="catalogo p-4 nunito">
+	    <div class="d-flex flex-wrap justify-content-center">
+	        {% for libro in filtros.qs %}
+	        <div class="d-flex flex-column p-2">
+	            <div class="card">
+	                <img class="portada card-img-top" src="{{ libro.portada.url }}" alt="Foto de la portada de {{ libro.titulo }} {{ libro.portada.url }} ">
+	                <div class="card-body">
+	                    <span class="badge badge-titulo">Título</span> {{ libro.titulo }} <br>
+	                    <span class="badge badge-autor">Autor</span> {{ libro.autor }} <br>
+	                    <span class="badge badge-precio">Precio</span> {{ libro.precio }} <br>
+	                    <a class="nunito-bold btn-editar" href="/editar_libro?id={{ libro.id }}" title="">Editar</a>
+	                    <a class="nunito-bold btn-eliminar" href="/eliminar_libro?id={{ libro.id }}" title="">Eliminar</a>
+	                </div>
+	            </div>
+	        </div>
+	        {% endfor %}
+	    </div>
+	</div>
+{% endblock content %}

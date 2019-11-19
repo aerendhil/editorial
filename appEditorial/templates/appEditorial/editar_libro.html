@@ -7,10 +7,15 @@
     {% include 'appEditorial/base_nav_libros.html' %}
 {% endblock nav_content %}
 {% block content %}
-    <div class="subheader">
-        <h1 class="titulo hepta-bold">Editar Libro</h1>
-    </div>
-    <div class="form-editar d-flex justify-content-center">
-
+	<div class="subheader">
+		<h1 class="titulo hepta-bold">Ingresar Libro</h1>
+	</div>
+    <div class="form-registro d-flex justify-content-center">
+        <form enctype="multipart/form-data" method="POST">
+            {% csrf_token %}
+            {{ libro_form|crispy }}
+            <br>
+            <button type="submit" class="btn btn-primary">Editar</button>
+        </form>
     </div>
 {% endblock content %}

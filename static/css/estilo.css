@@ -502,6 +502,24 @@ a:hover {
     align-self: center;
 }
 
+.btn-editar{
+    font-size: 20px;
+}
+
+.btn-editar:hover {
+    color: var(--dark);
+}
+
+.btn-eliminar{
+    font-size: 20px;
+    color: var(--light);
+}
+
+.btn-eliminar:hover {
+    color: var(--dark);
+}
+
+
 /* --- ANIMACIONES --- */
 
 .slide-top{-webkit-animation:slide-top .6s cubic-bezier(.25,.46,.45,.94) both;animation:slide-top .6s cubic-bezier(.25,.46,.45,.94) both}
