@@ -99,7 +99,7 @@ def eliminar_libro(request):
     libro.delete()
     messages.info(request, 'Libro eliminado correctamente')
     return HttpResponseRedirect(reverse('appEditorial:editar_libros'))
-    
+
 def agregar_autor(request):
     if request.method == "POST":
         form = AutorForm(request.POST)
