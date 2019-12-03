@@ -71,7 +71,7 @@ def agregar_libro(request):
         form = LibroForm()
     return render(request, 'appEditorial/agregarLibro.html',
         {
-            'libro_form': form
+            'libro_form': form,
         })
 
 
@@ -90,7 +90,7 @@ def editar_libro(request):
         form = LibroForm(instance=libro)
         return render(request, 'appEditorial/editar_libro.html',
             {
-                'libro_form': form
+                'libro_form': form,
             })
 
 def eliminar_libro(request):
