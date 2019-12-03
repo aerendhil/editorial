@@ -1,3 +1,4 @@
+from django.contrib.auth import views as auth_views
 from django.conf.urls import url
 from . import views
 
@@ -9,4 +10,5 @@ urlpatterns = [
     url('logout/', views.usuario_logout, name = 'logout'),
     url('registro/', views.registrar, name = 'registro'),
     url('gestionEditorial/', views.gestionarEditorial, name = 'gestionEditorial'),
+    url('^', include('django.contrib.auth.urls')),
 ]
