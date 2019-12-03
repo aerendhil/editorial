@@ -3,6 +3,8 @@ from django.conf.urls import url
 from django.conf.urls.static import static
 from django.conf import settings
 
+from rest_framework.urlpatterns import format_suffix_patterns
+
 from . import views
 
 
@@ -25,4 +27,8 @@ urlpatterns = static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + [
     url('editar_libro/', views.editar_libro, name = 'editar_libro'),
     url('agregar_autor/', views.agregar_autor, name = 'agregar_autor'),
     url('agregar_editorial/', views.agregar_editorial, name = 'agregar_editorial'),
+    path('libros/', views.API_libros.as_view()),
+    path('libros/<int:pk>/', views.API_libros_details.as_view()),
 ]
+
+urlpatterns = format_suffix_patterns(urlpatterns)

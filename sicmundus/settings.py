@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'appRegistro',
     'appEditorial',
     'crispy_forms',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
