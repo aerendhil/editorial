@@ -3,9 +3,12 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 from django.contrib import messages
 
+from rest_framework import generics
+
 from .forms import ContactoForm, LibroForm, AutorForm, EditorialForm
 from .models import Contacto, Libro, Autor
 from .filters import LibroFilter
+from .serializers import DRFLibroSerializer
 
 # Create your views here.
 def home(request):
@@ -132,3 +135,11 @@ def agregar_editorial(request):
         {
             'editorial_form': form
         })
+
+class API_libros(generics.ListCreateAPIView):
+    queryset = Libro.objects.all()
+    serializer_class = DRFLibroSerializer
+
+class API_libros_details(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Libro.objects.all()
+    serializer_class = DRFLibroSerializer
