@@ -15,7 +15,7 @@
             {% csrf_token %}
             {{ libro_form|crispy }}
             <br>
-            <button type="submit" class="btn btn-primary">Editar</button>
+            <button type="submit" onclick="clicked(event, '¿Desea editar el libro?')" class="btn btn-primary">Editar</button>
         </form>
     </div>
 {% endblock content %}

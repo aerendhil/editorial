@@ -33,7 +33,7 @@
 	                    <span class="badge badge-autor">Autor</span> {{ libro.autor }} <br>
 	                    <span class="badge badge-precio">Precio</span> {{ libro.precio }} <br>
 	                    <a class="nunito-bold btn-editar" href="/editar_libro?id={{ libro.id }}" title="">Editar</a>
-	                    <a class="nunito-bold btn-eliminar" href="/eliminar_libro?id={{ libro.id }}" title="">Eliminar</a>
+	                    <a class="nunito-bold btn-eliminar" href="/eliminar_libro?id={{ libro.id }}" onclick="clicked(event, '¿Desea eliminar el libro seleccionado?')" title="">Eliminar</a>
 	                </div>
 	            </div>
 	        </div>
