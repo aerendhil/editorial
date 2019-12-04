@@ -3,14 +3,14 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 from django.contrib import messages
 
-from rest_framework import generics, filters
+from rest_framework import generics, filters, viewsets
 
 from .forms import ContactoForm, LibroForm, AutorForm, EditorialForm
 from .models import Contacto, Libro, Autor
 from .filters import LibroFilter
-from .serializers import DRFLibroSerializer
+from .serializers import LibroSerializer
 
-# Create your views here.
+# Vistas
 def home(request):
 	return render(request, 'appEditorial/home.html')
 
@@ -136,19 +136,24 @@ def agregar_editorial(request):
             'editorial_form': form
         })
 
-class API_libros(generics.ListAPIView):
-    queryset = Libro.objects.all()
-    serializer_class = DRFLibroSerializer
+# Las vistas de la api serán sacadas directamente de estas clases
 
+#Todos los libros
+class API_libros(generics.ListAPIView):
+    serializer_class = LibroSerializer
+    queryset = Libro.objects.all()
+
+#Libros filtrados por titulo
 class API_libro_por_titulo(generics.ListAPIView):
-    serializer_class = DRFLibroSerializer
+    serializer_class = LibroSerializer
 
     def get_queryset(self):
         titulo = self.kwargs['titulo']
         return Libro.objects.filter(titulo=titulo)
 
+#Libros filtrados por id
 class API_libro_por_id(generics.ListAPIView):
-    serializer_class = DRFLibroSerializer
+    serializer_class = LibroSerializer
 
     def get_queryset(self):
         id = self.kwargs['id']
