@@ -21,5 +21,5 @@ urlpatterns = [
     path('', include('appEditorial.urls')),
     path('admin/', admin.site.urls),
     path('ad/', include('appRegistro.urls')),
-    url(r'', include('django.contrib.auth.urls')),
+    url('ad/', include('django.contrib.auth.urls')),
 ]
