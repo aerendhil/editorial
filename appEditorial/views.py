@@ -3,7 +3,7 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 from django.contrib import messages
 
-from rest_framework import generics
+from rest_framework import generics, filters
 
 from .forms import ContactoForm, LibroForm, AutorForm, EditorialForm
 from .models import Contacto, Libro, Autor
@@ -136,10 +136,20 @@ def agregar_editorial(request):
             'editorial_form': form
         })
 
-class API_libros(generics.ListCreateAPIView):
+class API_libros(generics.ListAPIView):
     queryset = Libro.objects.all()
     serializer_class = DRFLibroSerializer
 
-class API_libros_details(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Libro.objects.all()
+class API_libro_por_titulo(generics.ListAPIView):
     serializer_class = DRFLibroSerializer
+
+    def get_queryset(self):
+        titulo = self.kwargs['titulo']
+        return Libro.objects.filter(titulo=titulo)
+
+class API_libro_por_id(generics.ListAPIView):
+    serializer_class = DRFLibroSerializer
+
+    def get_queryset(self):
+        id = self.kwargs['id']
+        return Libro.objects.filter(id=id)

@@ -28,7 +28,8 @@ urlpatterns = static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + [
     url('agregar_autor/', views.agregar_autor, name = 'agregar_autor'),
     url('agregar_editorial/', views.agregar_editorial, name = 'agregar_editorial'),
     path('libros/', views.API_libros.as_view()),
-    path('libros/<int:pk>/', views.API_libros_details.as_view()),
+    path('libros/id/<id>/', views.API_libro_por_id.as_view()),
+    path('libros/titulo/<titulo>/', views.API_libro_por_titulo.as_view()),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
